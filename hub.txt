@@ -1,3 +1,8 @@
+/*This project content lot of files, use every file according to my instructions.
+HubVerse - public file with a name of (public) as it is.
+-database.js file
+In public file there should be all files which is given in public1.*/
+
 CREATE DATABASE hubverse;
 
 use hubverse;
