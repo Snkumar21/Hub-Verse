@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script src="Js/angular.min.js"></script>
+    <link rel="" type="" href="../Connection/signup.js" />
+    <link rel="stylesheet" type="text/css" href="css/Sign up.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="left"></div>
+
+      <div class="right">
+        <img src="Img/Logo1.png" class="logo" /><mindverse
+          ><b>Hub-Verse</b></mindverse
+        >
+        <br /><br />
+        <p1><b>Welcome Here</b></p1>
+        <br /><br />
+        <div class="login1">
+          <a href=""
+            ><button class="google">
+              <i class="fa fa-google"></i><p2><b>Log in with Google</b></p2>
+            </button></a
+          >
+        </div>
+        <br />
+        <p3>-------------OR LOGIN WITH EMAIL--------------</p3>
+        <br /><br />
+        <form id="/signupForm" action="/signupForm" method="POST">
+          <label><b>Name</b></label
+          ><br />
+          <input
+            type="text"
+            name="ename"
+            id="ename"
+            class="p1"
+            placeholder="Your Name"
+            required
+          />
+          <br /><br />
+          <label><b>Email</b></label
+          ><br />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="p1"
+            placeholder="Your Email"
+            required
+          />
+          <br /><br />
+          <label><b>Password</b></label
+          ><br />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="p1"
+            placeholder="Your Password"
+            required
+          />
+          <br /><br />
+          <a href="Index.html" class="home">Home</a>
+          <a href="All Cateogry.html"
+            ><button class="sub" value="submit" type="submit">Submit</button></a
+          >
+        </form>
+      </div>
+    </div>
+    <script src="Connection/database.js"></script>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("signupForm"); // Add an ID to your form element
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const ename = document.getElementById("ename").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        // Make a POST request to your server
+        fetch("/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ ename, email, password }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.success) {
+              alert("Sign Up Successfully");
+            } else {
+              alert("Error: " + data.message);
+            }
+          })
+          .catch((error) => console.error("Error:", error));
+      });
+    });
+  </script>
+</html>
