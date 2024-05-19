@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script src="Js/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/forgot.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="left">
+        <img src="Img/Logo1.png" class="logo" /><mindverse
+          ><b>Hub-Verse</b></mindverse
+        ><br /><br />
+        <p4>Welcome Back</p4><br /><br />
+        <p10>----------------------------------------------------------</p10>
+        <br /><br />
+        <form action="/forgot" method="post" id="/forgot">
+          <label><b>Email Address</b></label
+          ><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="p1"
+            placeholder="Email Address"
+            required
+          /><br /><br />
+          <label><b>Create Password</b></label
+          ><br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="p1"
+            placeholder="Password"
+            required
+          /><br /><br />
+          <label><b>Confirm Password</b></label
+          ><br />
+          <input
+            type="password"
+            id="confirmpassword"
+            name="confirmpassword"
+            class="p1"
+            placeholder="Password"
+            required
+          /><br /><br />
+          <input type="checkbox" class="keep" /><p3>Keep me logged in</p3
+          ><br /><br />
+          <a href="" class="log"
+            ><button type="submit" class="p4" value="/submit">Log in</button></a
+          >
+        </form>
+        <br />
+        <p5
+          >Don't have an account?
+          <a href="signUp.html" class="p5">Sign up</a></p5
+        >
+      </div>
+      <div class="right"></div>
+    </div>
+    <script src="../database.js"></script>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("/forgot");
+
+      form.addEventListener("/submit", function (event) {
+        event.preventDefault();
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword =
+          document.getElementById("confirmPassword").value;
+
+        if (password !== confirmPassword) {
+          alert("Passwords do not match. Please try again.");
+          return;
+        }
+
+        // Make a POST request to your server for form submission
+        fetch("/forgot", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.success) {
+              alert("Password Changed Successful!");
+              form.reset(); // Reset the form after successful submission
+            } else {
+              alert("Error: " + data.message);
+            }
+          })
+          .catch((error) => console.error("Error:", error));
+      });
+    });
+  </script>
+</html>
