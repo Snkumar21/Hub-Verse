@@ -1,0 +1,25 @@
+CREATE DATABASE hubverse;
+
+use hubverse;
+
+CREATE TABLE user1 (
+  uid INT AUTO_INCREMENT PRIMARY KEY,
+  uname VARCHAR(30) NOT NULL,
+  uemail VARCHAR(50) UNIQUE NOT NULL,
+  upassword VARCHAR(10) NOT NULL
+);
+
+CREATE TABLE contact1 (
+  fname VARCHAR(30) NOT NULL,
+  lname VARCHAR(30) NOT NULL,
+  cemail VARCHAR(50) UNIQUE NOT NULL,
+  uphone VARCHAR(10) NOT NULL,
+  message VARCHAR(150) NOT NULL,
+  CHECK (LENGTH(uphone) = 10)
+);
+
+CREATE TABLE review (
+  rname VARCHAR(30) NOT NULL,
+  remail VARCHAR(50) UNIQUE NOT NULL,
+  rmessage VARCHAR(250) NOT NULL
+);
