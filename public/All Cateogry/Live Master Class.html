@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/css.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      .iframe-container {
+        position: relative;
+        width: 100%;
+        height: 500px; /* Set the desired height for your iframe */
+      }
+
+      .loading-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 90%;
+        height: 150%;
+      }
+
+      .Syllabus {
+        width: 100%;
+        height: 100%;
+        display: none; /* Initially hide the iframe */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Main">
+      <div class="Top">
+        <div class="U1">
+          <div class="left1">
+            <i class="fa fa-phone"></i>
+            <p1>+91 937 393 7166 &nbsp;&nbsp; <b>|</b> &nbsp;&nbsp;</p1>
+            <i class="fa fa-envelope"></i>
+            <p1>hubverse@gmail.com</p1>
+          </div>
+          <div class="right1">
+            <a href="google.com" class="link"><i class="fa fa-google"></i></a>
+            <a
+              href="http://instagram.com/snkumar_19?igshid=Yjk4NWM2ZWVkMw=="
+              class="link"
+              ><i class="fa fa-instagram"></i
+            ></a>
+            <a href="linkedin.com/in/singh-nitish-ku-ajit-kumar" class="link"
+              ><i class="fa fa-linkedin"></i
+            ></a>
+            <a
+              href="twitter.com/snkumar30?t=Vs4dcv6cqt8sCoG9sqCXfQ&s=09"
+              class="link"
+              ><i class="fa fa-twitter"></i
+            ></a>
+            <a href="https://www.facebook.com/Snk6926" class="link"
+              ><i class="fa fa-facebook"></i
+            ></a>
+          </div>
+        </div>
+        <div class="D1">
+          <div class="left2">
+            <img src="../Img/Logo1.png" class="logo" />&nbsp;&nbsp;
+            <a href="../Index.html" class="tagline"><b>HUB-VERSE</b></a
+            ><br />
+            <p2>e-learning for all</p2>
+          </div>
+          <div class="right2">
+            <div id="userName" class="userName"></div>
+          </div>
+        </div>
+      </div>
+      <div class="Middle">
+        <div class="U2">
+          <p3
+            ><b><center>LEARN WITH EXPERT ANYTIME ANYWHERE.</center></b></p3
+          >
+          <br />
+          <form action="#" method="get" class="search-bar">
+            <input
+              type="text"
+              name="search"
+              list="input"
+              placeholder="Search"
+              class="search"
+            />
+            <datalist id="input">
+              <option value="Html">Html</option>
+              <option value="DataBase">DataBase</option>
+              <option value="Node.js">Node.js</option>
+              <option value="JavaScript">JavaScript</option>
+              <option value="Swift">Swift</option>
+              <option value="C#">C#</option>
+              <option value="C++">C++</option>
+              <option value="Ruby">Ruby</option>
+              <option value="C" target="C">C</option>
+              <option value="Php">Php</option>
+              <option value="Advance Java">Advance Java</option>
+              <option value="Java">Java</option>
+              <option value="Angular.JS">Angular.JS</option>
+              <option value="CSS">CSS</option>
+              <option value="MySql">MySql</option>
+            </datalist>
+            <button type="submit" class="submit">Search</button>
+          </form>
+        </div>
+        <br /><br />
+        <div class="D2">
+          <div class="left8">
+            <div class="box6">
+              <div class="left9">
+                <a
+                  href="../Subjects/Live Class/Business Lessons from Panchtantra.html"
+                  target="Syllabus"
+                  onclick="showLoading()"
+                  ><img src="../Img/Live/Lesson.jpg" class="img8"
+                /></a>
+              </div>
+              <div class="right9">
+                <a
+                  href="../Subjects/Live Class/Business Lessons from Panchtantra.html"
+                  target="Syllabus"
+                  class="name"
+                  >Business Lessons from Panchtantra</a
+                >
+                <br />
+                <i
+                  class="fa fa-level-up"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; Beginner &nbsp;&nbsp;&nbsp;
+                <i
+                  class="fa fa-hourglass-2"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; 2 hr<br />
+                <i
+                  class="fa fa-star"
+                  style="font-size: 15px; color: #f5d20a"
+                ></i
+                >&nbsp;&nbsp; 4.9 &nbsp;&nbsp;&nbsp;
+                <i class="fa fa-circle" style="font-size: 15px; color: grey"></i
+                >&nbsp;&nbsp;&nbsp;&nbsp;90.3k Enrolled
+              </div>
+            </div>
+            <br /><br />
+            <div class="box6">
+              <div class="left9">
+                <a
+                  href="../Subjects/Live Class/Career in Analytics - How to Transition.html"
+                  target="Syllabus"
+                  onclick="showLoading()"
+                  ><img src="../Img/Live/Career.jpg" class="img8"
+                /></a>
+              </div>
+              <div class="right9">
+                <a
+                  href="../Subjects/Live Class/Career in Analytics - How to Transition.html"
+                  target="Syllabus"
+                  class="name"
+                  >Career in Analytics - How to Transition</a
+                >
+                <br />
+                <i
+                  class="fa fa-level-up"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; Beginner &nbsp;&nbsp;&nbsp;
+                <i
+                  class="fa fa-hourglass-2"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; 2 hr<br />
+                <i
+                  class="fa fa-star"
+                  style="font-size: 15px; color: #f5d20a"
+                ></i
+                >&nbsp;&nbsp; 4.9 &nbsp;&nbsp;&nbsp;
+                <i class="fa fa-circle" style="font-size: 15px; color: grey"></i
+                >&nbsp;&nbsp;&nbsp;&nbsp;90.3k Enrolled
+              </div>
+            </div>
+            <br /><br />
+            <div class="box6">
+              <div class="left9">
+                <a
+                  href="../Subjects/Live Class/Career in analytics for Freshers.html"
+                  target="Syllabus"
+                  onclick="showLoading()"
+                  ><img src="../Img/Live/Analytics.jpg" class="img8"
+                /></a>
+              </div>
+              <div class="right9">
+                <a
+                  href="../Subjects/Live Class/Career in analytics for Freshers.html"
+                  class="name"
+                  target="Syllabus"
+                  >Career in Analytics for Fresher</a
+                >
+                <br /><br />
+                <i
+                  class="fa fa-level-up"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; Beginner &nbsp;&nbsp;&nbsp;
+                <i
+                  class="fa fa-hourglass-2"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; 2 hr<br /><br />
+                <i
+                  class="fa fa-star"
+                  style="font-size: 15px; color: #f5d20a"
+                ></i
+                >&nbsp;&nbsp; 4.9 &nbsp;&nbsp;&nbsp;
+                <i class="fa fa-circle" style="font-size: 15px; color: grey"></i
+                >&nbsp;&nbsp;&nbsp;&nbsp;90.3k Enrolled
+              </div>
+            </div>
+            <br /><br />
+            <div class="box6">
+              <div class="left9">
+                <a
+                  href="../Subjects/Live Class/Cloud Computing.html"
+                  target="Syllabus"
+                  onclick="showLoading()"
+                  ><img src="../Img/Live/Cloud.jpg" class="img8"
+                /></a>
+              </div>
+              <div class="right9">
+                <a
+                  href="../Subjects/Live Class/Cloud Computing.html"
+                  class="name"
+                  target="Syllabus"
+                  >Cloud Computing</a
+                >
+                <br /><br />
+                <i
+                  class="fa fa-level-up"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; Beginner &nbsp;&nbsp;&nbsp;
+                <i
+                  class="fa fa-hourglass-2"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; 2 hr<br /><br />
+                <i
+                  class="fa fa-star"
+                  style="font-size: 15px; color: #f5d20a"
+                ></i
+                >&nbsp;&nbsp; 4.9 &nbsp;&nbsp;&nbsp;
+                <i class="fa fa-circle" style="font-size: 15px; color: grey"></i
+                >&nbsp;&nbsp;&nbsp;&nbsp;90.3k Enrolled
+              </div>
+            </div>
+            <br /><br />
+            <div class="box6">
+              <div class="left9">
+                <a
+                  href="../Subjects/Live Class/Cybersecurity for Leaders - An Introduction.html"
+                  target="Syllabus"
+                  onclick="showLoading()"
+                  ><img src="../Img/Live/Cybersecurity.jpg" class="img8"
+                /></a>
+              </div>
+              <div class="right9">
+                <a
+                  href="../Subjects/Live Class/Cybersecurity for Leaders - An Introduction.html"
+                  class="name"
+                  target="Syllabus"
+                  >Cybersecurity for Leaders - An Introduction</a
+                >
+                <br />
+                <i
+                  class="fa fa-level-up"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; Beginner &nbsp;&nbsp;&nbsp;
+                <i
+                  class="fa fa-hourglass-2"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; 2 hr<br />
+                <i
+                  class="fa fa-star"
+                  style="font-size: 15px; color: #f5d20a"
+                ></i
+                >&nbsp;&nbsp; 4.9 &nbsp;&nbsp;&nbsp;
+                <i class="fa fa-circle" style="font-size: 15px; color: grey"></i
+                >&nbsp;&nbsp;&nbsp;&nbsp;90.3k Enrolled
+              </div>
+            </div>
+            <br /><br />
+            <div class="box6">
+              <div class="left9">
+                <a
+                  href="../Subjects/Live Class/How to Ace Coding Interview.html"
+                  target="Syllabus"
+                  onclick="showLoading()"
+                  ><img src="../Img/Live/Interview.jpg" class="img8"
+                /></a>
+              </div>
+              <div class="right9">
+                <a
+                  href="../Subjects/Live Class/How to Ace Coding Interview.html"
+                  class="name"
+                  target="Syllabus"
+                  >How to Ace Coding Interview</a
+                >
+                <br /><br />
+                <i
+                  class="fa fa-level-up"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; Beginner &nbsp;&nbsp;&nbsp;
+                <i
+                  class="fa fa-hourglass-2"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; 2 hr<br /><br />
+                <i
+                  class="fa fa-star"
+                  style="font-size: 15px; color: #f5d20a"
+                ></i
+                >&nbsp;&nbsp; 4.9 &nbsp;&nbsp;&nbsp;
+                <i class="fa fa-circle" style="font-size: 15px; color: grey"></i
+                >&nbsp;&nbsp;&nbsp;&nbsp;90.3k Enrolled
+              </div>
+            </div>
+            <br /><br />
+            <div class="box6">
+              <div class="left9">
+                <a
+                  href="../Subjects/Live Class/How to Become a Business Analyst.html"
+                  target="Syllabus"
+                  onclick="showLoading()"
+                  ><img src="../Img/Live/Business.jpg" class="img8"
+                /></a>
+              </div>
+              <div class="right9">
+                <a
+                  href="../Subjects/Live Class/How to Become a Business Analyst.html"
+                  class="name"
+                  target="Syllabus"
+                  >How to Become a Business Analyst</a
+                >
+                <br />
+                <i
+                  class="fa fa-level-up"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; Beginner &nbsp;&nbsp;&nbsp;
+                <i
+                  class="fa fa-hourglass-2"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; 2 hr<br />
+                <i
+                  class="fa fa-star"
+                  style="font-size: 15px; color: #f5d20a"
+                ></i
+                >&nbsp;&nbsp; 4.9 &nbsp;&nbsp;&nbsp;
+                <i class="fa fa-circle" style="font-size: 15px; color: grey"></i
+                >&nbsp;&nbsp;&nbsp;&nbsp;90.3k Enrolled
+              </div>
+            </div>
+            <br /><br />
+            <div class="box6">
+              <div class="left9">
+                <a
+                  href="../Subjects/Live Class/How to get a job in Analytics.html"
+                  target="Syllabus"
+                  onclick="showLoading()"
+                  ><img src="../Img/Live/Job.jpg" class="img8"
+                /></a>
+              </div>
+              <div class="right9">
+                <a
+                  href="../Subjects/Live Class/How to get a job in Analytics.html"
+                  class="name"
+                  target="Syllabus"
+                  >How to get a job in Analytics</a
+                >
+                <br /><br />
+                <i
+                  class="fa fa-level-up"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; Beginner &nbsp;&nbsp;&nbsp;
+                <i
+                  class="fa fa-hourglass-2"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; 2 hr<br /><br />
+                <i
+                  class="fa fa-star"
+                  style="font-size: 15px; color: #f5d20a"
+                ></i
+                >&nbsp;&nbsp; 4.9 &nbsp;&nbsp;&nbsp;
+                <i class="fa fa-circle" style="font-size: 15px; color: grey"></i
+                >&nbsp;&nbsp;&nbsp;&nbsp;90.3k Enrolled
+              </div>
+            </div>
+            <br /><br />
+            <div class="box6">
+              <div class="left9">
+                <a
+                  href="../Subjects/Live Class/Introduction to Java.html"
+                  target="Syllabus"
+                  onclick="showLoading()"
+                  ><img src="../Img/Live/Java.jpg" class="img8"
+                /></a>
+              </div>
+              <div class="right9">
+                <a
+                  href="../Subjects/Live Class/Introduction to Java.html"
+                  class="name"
+                  target="Syllabus"
+                  >Introduction to Java</a
+                >
+                <br /><br />
+                <i
+                  class="fa fa-level-up"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; Beginner &nbsp;&nbsp;&nbsp;
+                <i
+                  class="fa fa-hourglass-2"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; 2 hr<br /><br />
+                <i
+                  class="fa fa-star"
+                  style="font-size: 15px; color: #f5d20a"
+                ></i
+                >&nbsp;&nbsp; 4.9 &nbsp;&nbsp;&nbsp;
+                <i class="fa fa-circle" style="font-size: 15px; color: grey"></i
+                >&nbsp;&nbsp;&nbsp;&nbsp;90.3k Enrolled
+              </div>
+            </div>
+            <br /><br />
+            <div class="box6">
+              <div class="left9">
+                <a
+                  href="../Subjects/Live Class/Python for Data Science.html"
+                  target="Syllabus"
+                  onclick="showLoading()"
+                  ><img src="../Img/Live/Python.jpg" class="img8"
+                /></a>
+              </div>
+              <div class="right9">
+                <a
+                  href="../Subjects/Live Class/Python for Data Science.html"
+                  class="name"
+                  target="Syllabus"
+                  >Python for Data Science</a
+                >
+                <br /><br />
+                <i
+                  class="fa fa-level-up"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; Beginner &nbsp;&nbsp;&nbsp;
+                <i
+                  class="fa fa-hourglass-2"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; 2 hr<br /><br />
+                <i
+                  class="fa fa-star"
+                  style="font-size: 15px; color: #f5d20a"
+                ></i
+                >&nbsp;&nbsp; 4.9 &nbsp;&nbsp;&nbsp;
+                <i class="fa fa-circle" style="font-size: 15px; color: grey"></i
+                >&nbsp;&nbsp;&nbsp;&nbsp;90.3k Enrolled
+              </div>
+            </div>
+            <br /><br />
+            <div class="box6">
+              <div class="left9">
+                <a
+                  href="../Subjects/Live Class/Python for Machine Learning.html"
+                  target="Syllabus"
+                  onclick="showLoading()"
+                  ><img src="../Img/Live/Machine Learning.jpg" class="img8"
+                /></a>
+              </div>
+              <div class="right9">
+                <a
+                  href="../Subjects/Live Class/Python for Machine Learning.html"
+                  class="name"
+                  target="Syllabus"
+                  >Python for Machine Learning</a
+                >
+                <br /><br />
+                <i
+                  class="fa fa-level-up"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; Beginner &nbsp;&nbsp;&nbsp;
+                <i
+                  class="fa fa-hourglass-2"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; 2 hr<br /><br />
+                <i
+                  class="fa fa-star"
+                  style="font-size: 15px; color: #f5d20a"
+                ></i
+                >&nbsp;&nbsp; 4.9 &nbsp;&nbsp;&nbsp;
+                <i class="fa fa-circle" style="font-size: 15px; color: grey"></i
+                >&nbsp;&nbsp;&nbsp;&nbsp;90.3k Enrolled
+              </div>
+            </div>
+            <br /><br />
+            <div class="box6">
+              <div class="left9">
+                <a
+                  href="../Subjects/Live Class/VUCA World - Leadership Skills.html"
+                  target="Syllabus"
+                  onclick="showLoading()"
+                  ><img src="../Img/Live/Leadership.jpg" class="img8"
+                /></a>
+              </div>
+              <div class="right9">
+                <a
+                  href="../Subjects/Live Class/VUCA World - Leadership Skills.html"
+                  class="name"
+                  target="Syllabus"
+                  >VUCA World - Leadership Skills</a
+                >
+                <br /><br />
+                <i
+                  class="fa fa-level-up"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; Beginner &nbsp;&nbsp;&nbsp;
+                <i
+                  class="fa fa-hourglass-2"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; 2 hr<br /><br />
+                <i
+                  class="fa fa-star"
+                  style="font-size: 15px; color: #f5d20a"
+                ></i
+                >&nbsp;&nbsp; 4.9 &nbsp;&nbsp;&nbsp;
+                <i class="fa fa-circle" style="font-size: 15px; color: grey"></i
+                >&nbsp;&nbsp;&nbsp;&nbsp;90.3k Enrolled
+              </div>
+            </div>
+            <br /><br />
+            <div class="box6">
+              <div class="left9">
+                <a
+                  href="../Subjects/Live Class/Introduction to CSS.html"
+                  target="Syllabus"
+                  onclick="showLoading()"
+                  ><img src="../Img/Live/CSS.jpg" class="img8"
+                /></a>
+              </div>
+              <div class="right9">
+                <a
+                  href="../Subjects/Live Class/Introduction to CSS.html"
+                  target="Syllabus"
+                  class="name"
+                  >Introduction to CSS</a
+                >
+                <br />
+                <i
+                  class="fa fa-level-up"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; Beginner &nbsp;&nbsp;&nbsp;
+                <i
+                  class="fa fa-hourglass-2"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; 2 hr<br />
+                <i
+                  class="fa fa-star"
+                  style="font-size: 15px; color: #f5d20a"
+                ></i
+                >&nbsp;&nbsp; 4.9 &nbsp;&nbsp;&nbsp;
+                <i class="fa fa-circle" style="font-size: 15px; color: grey"></i
+                >&nbsp;&nbsp;&nbsp;&nbsp;90.3k Enrolled
+              </div>
+            </div>
+            <br /><br />
+            <div class="box6">
+              <div class="left9">
+                <a
+                  href="../Subjects/Live Class/What Is C.html"
+                  target="Syllabus"
+                  onclick="showLoading()"
+                  name="C"
+                  ><img src="../Img/Live/C.jpg" class="img8"
+                /></a>
+              </div>
+              <div class="right9">
+                <a
+                  href="../Subjects/Live Class/What Is C.html"
+                  target="Syllabus"
+                  class="name"
+                  name="C"
+                  >What Is C?</a
+                >
+                <br />
+                <i
+                  class="fa fa-level-up"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; Beginner &nbsp;&nbsp;&nbsp;
+                <i
+                  class="fa fa-hourglass-2"
+                  style="font-size: 15px; color: black"
+                ></i
+                >&nbsp;&nbsp; 2 hr<br />
+                <i
+                  class="fa fa-star"
+                  style="font-size: 15px; color: #f5d20a"
+                ></i
+                >&nbsp;&nbsp; 4.9 &nbsp;&nbsp;&nbsp;
+                <i class="fa fa-circle" style="font-size: 15px; color: grey"></i
+                >&nbsp;&nbsp;&nbsp;&nbsp;90.3k Enrolled
+              </div>
+            </div>
+            <br /><br />
+          </div>
+          <div class="right8">
+            <h8>Topics To Learn...</h8>
+            <div class="iframe-container">
+              <img
+                src="../Img/Hhhw.png"
+                alt="Loading Image"
+                class="loading-image"
+                id="loadingImage"
+              />
+              <iframe name="Syllabus" class="Syllabus" frameborder="0"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="Lower">
+          <div class="D3">
+            <img src="../Img/Logo.png" class="mainlogo" />
+            <p12>&copy; 2023 <span>Hub-Verse</span> Powered By Snkumar</p12>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function showLoading() {
+        // Display the loading image
+        document.getElementById("loadingImage").style.display = "block";
+
+        // Hide the iframe content temporarily
+        document.querySelector(".Syllabus").style.display = "none";
+
+        // You can add a timeout to simulate loading time (optional)
+        setTimeout(function () {
+          // After some time (or when the content is ready), hide the loading image and show the iframe content
+          document.getElementById("loadingImage").style.display = "none";
+          document.querySelector(".Syllabus").style.display = "block";
+        }, 2000); // Adjust the timeout value as needed
+      }
+    </script>
+  </body>
+</html>
