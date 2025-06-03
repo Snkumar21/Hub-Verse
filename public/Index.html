@@ -1,313 +1,605 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>HubVerse</title>
-        <script src="Js/angular.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="./css/css.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body>
-        <div class="Main">
-            <div class="Top">
-                <div class="U1">
-                    <div class="left1">
-                        <i class="fa fa-phone"></i>
-                        <p1>+91 937 393 7166 &nbsp;&nbsp; <b>|</b> &nbsp;&nbsp;
-                        <i class="fa fa-envelope"></i>
-                        <p1>hubverse@gmail.com</p1>
-                    </p1></div>
-                    <div class="right1">
-                        <a href="google.com" class="link"><i class="fa fa-google"></i></a>
-                        <a href="http://instagram.com/snkumar_19?igshid=Yjk4NWM2ZWVkMw==" class="link"><i class="fa fa-instagram"></i></a>
-                        <a href="linkedin.com/in/singh-nitish-ku-ajit-kumar" class="link"><i class="fa fa-linkedin"></i></a>
-                        <a href="twitter.com/snkumar30?t=Vs4dcv6cqt8sCoG9sqCXfQ&amp;s=09" class="link"><i class="fa fa-twitter"></i></a>
-                        <a href="https://www.facebook.com/Snk6926" class="link"><i class="fa fa-facebook"></i></a>
-                    </div>
-                </div>
-                <div class="D1">
-                    <div class="left2">
-                        <img src="Img/Logo1.png" class="logo" alt="">&nbsp;&nbsp;
-                        <a href="Index.html" class="tagline"><b>HUB-VERSE</b></a><br>
-                        <p2>e-learning for all</p2>
-                    </div>
-                    <div class="right2">
-                        <a href="Index.html" class="nav">Home</a>
-                        <a href="About.html" class="nav">About</a>
-                        <a href="Courses.html" class="nav">Courses</a>
-                        <a href="#contact" class="nav">Contact</a>
-                        <a href="Review.html" class="nav">Reviews</a>
-                        <a href="Login.html" class="join">Join Us</a>
-                    </div>
-                </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Responsive Index Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(to right, #252c54, #4b6cb7);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    header .logo {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    .join-btn {
+      background-color: #00bcd4;
+      border: none;
+      padding: 8px 18px;
+      font-size: 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      color: #252c54;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .join-btn:hover {
+      background-color: #028a9b;
+      color: white;
+    }
+
+    main {
+      width: 90%;
+      max-width: 1200px;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+
+    .logo-image {
+      height: 40px;
+      width: 40px;
+      object-fit: contain;
+    }
+
+    /* Search Bar */
+    .search-bar {
+      display: flex;
+      width: 60%;
+      margin: 0 auto;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 0 8px rgba(0, 188, 212, 0.6);
+    }
+
+    .search-bar input[type="text"] {
+      flex: 1;
+      padding: 12px 20px;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      border-radius: 25px 0 0 25px;
+    }
+
+    .search-bar button[type="submit"] {
+      background-color: #00bcd4;
+      border: none;
+      padding: 0 25px;
+      font-size: 20px;
+      color: #252c54;
+      cursor: pointer;
+      border-radius: 0 25px 25px 0;
+      transition: background-color 0.3s ease;
+    }
+
+    .search-bar button[type="submit"]:hover {
+      background-color: #028a9b;
+      color: white;
+    }
+
+    /* Sections */
+    .hero, #slider, #teachers {
+      background: rgba(255 255 255 / 0.1);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+    }
+
+    section h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #00bcd4;
+      padding-bottom: 8px;
+      width: fit-content;
+    }
+
+    .teachers, .slider-bar {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .teacher-card, .slide {
+      background: rgba(0, 188, 212, 0.2);
+      border-radius: 15px;
+      padding: 20px;
+      width: 220px;
+      text-align: center;
+      color: #252c54;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .teacher-card:hover, .slide:hover {
+      background-color: #00bcd4;
+      color: white;
+    }
+
+    /* Teachers Grid Layout */
+    .teachers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .teacher-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 188, 212, 0.4);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .teacher-card:hover {
+      background-color: #00bcd4;
+      color: white;
+      transform: translateY(-5px);
+    }
+
+    .teacher-card img.img2 {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 3px solid #00bcd4;
+    }
+
+    /* Contact Section */
+    #contact {
+      background: rgba(255 255 255 / 0.1);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+      margin: 30px;
+      width: 1200px;
+    }
+
+    .contact-wrapper {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 60px 20px;
+      color: white;
+    }
+
+    .contact-container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .contact-intro h2 {
+      font-size: 30px;
+      color: #fff;
+    }
+
+    .contact-intro p {
+      font-size: 16px;
+      margin-top: 10px;
+      color: #eee;
+    }
+
+    .contact-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+
+    .contact-form,
+    .contact-info {
+      flex: 1 1 450px;
+      background: rgba(0, 188, 212, 0.1);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+    }
+
+    .contact-form h3,
+    .contact-info h3 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #00bcd4;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form .form-row {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+      width: 100%;
+      outline: none;
+      background: white;
+      color: #252c54;
+    }
+
+    .contact-form button {
+      background-color: #00bcd4;
+      color: #252c54;
+      font-weight: bold;
+      border: none;
+      padding: 12px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #028a9b;
+      color: white;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .contact-info i {
+      margin-right: 10px;
+      color: #00bcd4;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      background: #00bcd4;
+      color: #252c54;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 50%;
+      text-align: center;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background: #028a9b;
+      color: white;
+    }
+
+    .social-icons a i {
+      color: #fff;
+      font-size: 22px;
+    }
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .contact-content {
+        flex-direction: column;
+      }
+
+      .contact-form .form-row {
+        flex-direction: column;
+      }
+    }
+
+    /* Footer */
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      text-align: center;
+      font-size: 14px;
+      color: #bbb;
+    }
+
+    /* Responsive media queries */
+    @media (max-width: 768px) {
+      .search-bar {
+        width: 90%;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 15px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .join-btn {
+        width: 100%;
+        max-width: 200px;
+        margin-top: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .search-bar input[type="text"] {
+        font-size: 16px;
+        padding: 10px 15px;
+      }
+
+      .search-bar button[type="submit"] {
+        font-size: 16px;
+        padding: 0 20px;
+      }
+
+      section h2 {
+        font-size: 22px;
+      }
+
+      .teacher-card, .slide {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .teacher-card {
+        padding: 15px;
+      }
+
+      .slide {
+        font-size: 16px;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+      <div class="logo" tabindex="0">
+          <img src="Img/Logo1.png" alt="HubVerse Logo" class="logo-image" />
+          HubVerse
+      </div>
+      <nav aria-label="Primary Navigation">
+          <a href="index.html" class="nav">Home</a>
+          <a href="About.html" class="nav">About</a>
+          <a href="Courses.html" class="nav">Courses</a>
+          <a href="index.html/#contact" class="nav">Contact</a>
+          <a href="Review.html" class="nav">Reviews</a>
+      </nav>
+      <button class="join-btn" id="join-btn" onclick="redirectToLogin()" aria-label="Join Now">Join Now</button>
+  </header>
+
+  <main>
+    <!-- Search Bar -->
+    <section class="hero" id="home">
+    <div class="hero-content">
+      <form action="#" method="get" class="search-bar" onsubmit="handleSearch(event)">
+        <input type="text" name="search" list="input" placeholder="Search Courses" class="search" id="searchInput">
+        <datalist id="input">
+          <option value="Html5">Html5</option>
+          <option value="DataBase">DataBase</option>
+          <option value="Node.js">Node.js</option>
+          <option value="JavaScript">JavaScript</option>
+          <option value="Swift">Swift</option>
+          <option value="C#">C#</option>
+          <option value="C++">C++</option>
+          <option value="Ruby">Ruby</option>
+          <option value="C">C</option>
+          <option value="Php">Php</option>
+          <option value="Advance Java">Advance Java</option>
+          <option value="Java">Java</option>
+          <option value="Angular.JS">Angular.JS</option>
+          <option value="CSS">CSS</option>
+          <option value="MySql">MySql</option>
+          <option value="Robotics">Robotics</option>
+          <option value="Python">Python</option>
+        </datalist>
+        <button type="submit" class="submit">Search</button>
+      </form>
+    </div>
+  </section>
+
+    <!-- Teachers Section -->
+    <section id="teachers" aria-labelledby="teachers-heading">
+      <h2 id="teachers-heading">Our Teachers</h2>
+      <div class="teachers-grid">
+        <div class="teacher-card" tabindex="0">
+          <img src="Img/T1.jpg" class="img2" alt="Jennie Josh">
+          <h3>Jennie Josh</h3>
+          <p>Leading the youth in the right path gives you another opportunity to live in a wonderful earth.</p>
+        </div>
+        <div class="teacher-card" tabindex="0">
+          <img src="Img/T2.jpg" class="img2" alt="Michael Smith">
+          <h3>Michael Smith</h3>
+          <p>Empowering minds, shaping futures — that's what a teacher does every day.</p>
+        </div>
+        <div class="teacher-card" tabindex="0">
+          <img src="Img/T3.jpg" class="img2" alt="Sara Lee">
+          <h3>Sara Lee</h3>
+          <p>Education is not the filling of a pail, but the lighting of a fire.</p>
+        </div>
+        <div class="teacher-card" tabindex="0">
+          <img src="Img/T4.jpg" class="img2" alt="Daniel Green">
+          <h3>Daniel Green</h3>
+          <p>Every child deserves a champion – an adult who will never give up on them.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slider Section -->
+    <section id="slider" aria-labelledby="slider-heading">
+      <h2 id="slider-heading">Top Courses</h2>
+      <div class="slider-bar">
+        <div class="slide" tabindex="0">
+          HTML5
+        </div>
+        <div class="slide" tabindex="0">
+          CSS
+        </div>
+        <div class="slide" tabindex="0">
+          JavaScript
+        </div>
+        <div class="slide" tabindex="0">
+          Java
+        </div>
+        <div class="slide" tabindex="0">
+          React.js
+        </div>
+        <div class="slide" tabindex="0">
+          Node.js
+        </div>
+        <div class="slide" tabindex="0">
+          Vue.js
+        </div>
+        <div class="slide" tabindex="0">
+          Android
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-wrapper">
+    <div class="contact-container">
+      <div class="contact-intro">
+        <h2>Get In Touch</h2>
+        <p>Don't be shy. Give us a call or drop us a line.<br>Let's make some magic together.</p>
+      </div>
+
+      <div class="contact-content">
+        <!-- Left: Form -->
+        <div class="contact-form">
+          <h3>Send a Message</h3>
+          <form action="/contact" method="post">
+            <div class="form-row">
+              <input type="text" name="fname" id="fname" placeholder="First Name" required>
+              <input type="text" name="lname" id="lname" placeholder="Last Name" required>
             </div>
-            <div class="Middle">
-                <div class="U2">
-                    <p3><b><center><span>LEARN WITH EXPERT ANYTIME ANYWHERE.</span></center></b></p3>
-                        <br>
-                    <form action="#" method="get" class="search-bar" onsubmit="handleSearch()">
-                        <input type="text" name="search" list="input" placeholder="Search Courses" class="search" id="searchInput">
-                        <datalist id="input">
-                                <option value="Html5">Html5</option>
-                                <option value="DataBase">DataBase</option>
-                                <option value="Node.js">Node.js</option>
-                                <option value="JavaScript">JavaScript</option>
-                                <option value="Swift">Swift</option>
-                                <option value="C#">C#</option>
-                                <option value="C++">C++</option>
-                                <option value="Ruby">Ruby</option>
-                                <option value="C">C</option>
-                                <option value="Php">Php</option>
-                                <option value="Advance Java">Advance Java</option>
-                                <option value="Java">Java</option>
-                                <option value="Angular.JS">Angular.JS</option>
-                                <option value="CSS">CSS</option>
-                                <option value="MySql">MySql</option>
-                                <option value="Robotics">Robotics</option>
-                                <option value="Python">Python</option>
-                        </datalist>
-                        <button type="submit" class="submit">Search</button>
-                    </form>
-                </div>
-                <br><br><br><br><br>
-                <div class="D2">
-                    <div class="left3">
-                        <p4><b>Grab Your Opportunity Now!</b></p4>
-                            <br><br>
-                        <p5>Join Now To HubVerse And Grab Your Opportunity Now...
-                                <br>
-                            Learn with our best Teachers and Grab the greatest 
-                                <br>
-                            opportunity to being qualified from HubVerse.
-                        <br><br>
-                            New Courses have been added to the Course list and best 
-                                <br>
-                            learning skills will be given to you.
-                                <br>
-                            Limited seats are available for the new batch for future based <br>Courses.
-                                <br>
-                            Join with us as soon as possible, your opportunity is waiting 
-                                <br>
-                            just a step.
-                        <br><br>
-                            Our best teacher will teach you in best manner our top score 
-                                <br>
-                            of this platform is unmatchable.
-                                <br><br>
-                            <b><a href="Login.html" class="Link">Join Us Now!</a></b>
-                        </p5>
-                    </div>
-                    <div class="right3">
-                        <img src="Img/1.png" class="img1">
-                    </div>
-                </div>
-                <div class="Intro">
-                    <h1><b><center><span>Our Teachers</span></center></b></h1><br><br>
-                    <div class="Teachers">
-                        <div class="box1">
-                            <img src="Img/T1.jpg" class="img2">
-                            <h2><center><span>Jennie Josh</span></center></h2>
-                            <p6>Leading the youth in the right path gives you another opportunity to live in a wonderful earth.</p6>
-                        </div>
-
-                        <div class="box1">
-                            <img src="Img/T2.jpg" class="img2">
-                            <h2><center><span>Jack John</span></center></h2>
-                            <p6>"If you want to shine like a sun, first burn like a sun..." These words always inspire by <b>Dr. APJ Abdul Kalam</b></p6>
-                        </div>
-
-                        <div class="box1">
-                            <img src="Img/T3.jpg" class="img2">
-                            <h2><center><span>Priya More</span></center></h2>
-                            <p6>Leading generation to a right path is my mission and I will be success in this mission. Youth are like a mud and we can shape as we like.</p6>
-                        </div>
-
-                        <div class="box1">
-                            <img src="Img/T4.jpg" class="img2">
-                            <h2><center><span>Hennry Caos</span></center></h2>
-                            <p6>Education is not a weapon it is the key to unlock the golden door of freedom...</p6>
-                        </div>
-                    </div>
-                </div>
-            <br><br>
-                <div class="Courses">
-                    <h3><b><center><span>OUR COURSES</span></center></b></h3>
-                    <div class="slider-bar">
-                        <div class="slide-container">
-                            <div class="box2">
-                                <a href="Subjects/IT &amp; Software/Angular JS.html"><img src="Img/Angular.jpg" class="img3"></a>
-                                <sub>Angular JS</sub><br>
-                                <a href="Subjects/IT &amp; Software/Angular JS.html" class="learn">Learn more</a>
-                            </div>
-
-                            <div class="box2">
-                                <a href="Subjects/IT &amp; Software/C++.html"><img src="Img/C++.jpg" class="img3"></a>
-                                <sub>C++</sub><br>
-                                <a href="Subjects/IT &amp; Software/C++.html" class="learn">Learn more</a>
-                            </div>
-
-                            <div class="box2">
-                                <a href="Subjects/IT &amp; Software/C.html"><img src="Img/C.jpg" class="img3"></a>
-                                <sub>C</sub><br>
-                                <a href="Subjects/IT &amp; Software/C.html" class="learn">Learn more</a>
-                            </div>
-
-                            <div class="box2">
-                                <a href="Subjects/IT &amp; Software/CSS.html"><img src="Img/Css.jpg" class="img3"></a>
-                                <sub>CSS</sub><br>
-                                <a href="Subjects/IT &amp; Software/CSS.html" class="learn">Learn more</a>
-                            </div>
-
-                            <div class="box2">
-                                <a href="Subjects/IT &amp; Software/HTML5.html"><img src="Img/Html.jpg" class="img3"></a>
-                                <sub>HTML5</sub><br>
-                                <a href="Subjects/IT &amp; Software/HTML5.html" class="learn">Learn more</a>
-                            </div>
-
-                            <div class="box2">
-                                <a href="Subjects/IT &amp; Software/Java.html"><img src="Img/Java.jpg" class="img3"></a>
-                                <sub>Java</sub><br>
-                                <a href="Subjects/IT &amp; Software/Java.html" class="learn">Learn more</a>
-                            </div>
-
-                            <div class="box2">
-                                <a href="Subjects/IT &amp; Software/Python.html"><img src="Img/Python.jpg" class="img3"></a>
-                                <sub>Python</sub><br>
-                                <a href="Subjects/IT &amp; Software/Python.html" class="learn">Learn more</a>
-                            </div>
-
-                            <div class="box2">
-                                <a href="Subjects/IT &amp; Software/Ruby.html"><img src="Img/Ruby.jpg" class="img3"></a>
-                                <sub>Ruby</sub><br>
-                                <a href="Subjects/IT &amp; Software/Ruby.html" class="learn">Learn more</a>
-                            </div>
-
-                            <div class="box2">
-                                <a href="Subjects/IT &amp; Software//Node js.html"><img src="Img/Nodejs.jpg" class="img3"></a>
-                                <sub>Node.Js</sub><br>
-                                <a href="Subjects/IT &amp; Software/Node js.html" class="learn">Learn more</a>
-                            </div>
-
-                            <div class="box2">
-                                <a href="Subjects/IT &amp; Software/MySql.html"><img src="Img/mysql.jpg" class="img3"></a>
-                                <sub>MySql</sub><br>
-                                <a href="Subjects/IT &amp; Software/MySql.html" class="learn">Learn more</a>
-                            </div>
-
-                            <div class="box2">
-                                <a href="Subjects/IT &amp; Software/Android Application Development.html"><img src="Img/Android.jpg" class="img3"></a>
-                                <sub>Android Programming</sub><br>
-                                <a href="Subjects/IT &amp; Software/Android Application Development.html" class="learn">Learn more</a>
-                            </div>
-
-                            <div class="box2">
-                                <a href="Subjects/IT &amp; Software/Php.html"><img src="Img/Php.jpg" class="img3"></a>
-                                <sub>Php</sub><br>
-                                <a href="Subjects/IT &amp; Software/Php.html" class="learn">Learn more</a>
-                            </div>
-
-                            <div class="box2">
-                                <a href="Subjects/IT &amp; Software/Swift.html"><img src="Img/Swift.jpg" class="img3"></a>
-                                <sub>Swift</sub><br>
-                                <a href="Subjects/IT &amp; Software/Swift.html" class="learn">Learn more</a>
-                            </div>
-
-                            <div class="box2">
-                                <a href="Subjects/IT &amp; Software/C#.html"><img src="Img/C1.png" class="img3"></a>
-                                <sub>C#</sub><br>
-                                <a href="Subjects/IT &amp; Software/C#.html" class="learn">Learn more</a>
-                            </div>
-
-                            <div class="box2">
-                                <a href="Subjects/IT &amp; Software/ASP Net.html"><img src="Img/ASP.jpg" class="img3"></a>
-                                <sub>ASP.Net</sub><br>
-                                <a href="Subjects/IT &amp; Software/ASP Net.html" class="learn">Learn more</a>
-                            </div>
-
-                            <div class="box2">
-                                <a href="Subjects/IT &amp; Software/DBMS.html"><img src="Img/Dbms.jpg" class="img3"></a>
-                                <sub>DataBase Management</sub><br>
-                                <a href="Subjects/IT &amp; Software/DBMS.html" class="learn">Learn more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <br><br>
+            <div class="form-row">
+              <input type="email" name="email" id="cemail" placeholder="Email" required>
+              <input type="tel" name="phone" id="uphone" placeholder="Phone" required>
             </div>
-            <div class="Lower">
-                <div class="U3">
-                    <div class="contact" id="contact">
-                        <div class="U4">
-                            <p7><b><span>Get In Touch</span></b></p7><br><br>
-                            <p8>Don't be shy. Give us a call or drop us a line.</p8><br>
-                            <p8>Let's make some magic together.</p8><br>
-                        </div>
-                    <br><br>
-                        <div class="D4">
-                            <div class="left4"><br>
-                                <p9><b>Send a Message</b></p9><br><br>
-
-                                <form action="/contact" id="/contact" method="post">
-                                        <input type="text" id="fname" name="fname" placeholder="First Name" class="input" style="width: 250px;" required="">                                
-                                                
-                                        <input type="text" id="lname" name="lname" placeholder="Last Name" class="input" style="width: 250px;" required="">
-                                                <br><br>
-                                        <input type="email" id="cemail" name="cemail" placeholder="Email" class="input" style="width: 250px;" required="">
-
-                                        <input type="number" id="uphone" name="uphone" placeholder="Phone" class="input" style="width: 250px;" required="">
-                                                <br><br>
-                                        <textarea id="message" name="message" placeholder="How can we help?" class="input" style="width: 540px;" required=""></textarea>
-                                                <br><br><br>
-                                        <input type="submit" class="submit1" value="submit" placeholder="Submit">
-                                </form>
-                            </div>
-                            <div class="right4">
-                                <div class="info"><br>
-                                    <p10><b>Contact Info</b></p10><br><br>
-
-                                    <i class="fa fa-phone" style="font-size: 20px; color: white; margin-left: 30px;"></i>
-                                    <p11>+91 937 393 7166</p11>
-
-                                        <br><br>
-
-                                    <i class="fa fa-envelope" style="font-size: 20px; color: white; margin-left: 30px;"></i>
-                                    <p11>hubverse@gmail.com</p11>
-                                        
-                                        <br><br><br>
-                                    
-                                    <span class="fa-stack fa-1x">
-                                        <i class="fa fa-circle fa-stack-1x c2"></i>
-                                        <i class="fa fa-facebook fa-stack-1x c1"></i>
-                                    </span>&nbsp;
-                                    <span class="fa-stack fa-1x">
-                                        <i class="fa fa-circle fa-stack-1x c2"></i>
-                                        <i class="fa fa-google fa-stack-1x c1"></i>
-                                    </span>&nbsp;
-                                    <span class="fa-stack fa-1x">
-                                        <i class="fa fa-circle fa-stack-1x c2"></i>
-                                        <i class="fa fa-twitter fa-stack-1x c1"></i>
-                                    </span>&nbsp;
-                                    <span class="fa-stack fa-1x">
-                                        <i class="fa fa-circle fa-stack-1x c2"></i>
-                                        <i class="fa fa-linkedin fa-stack-1x c1"></i>
-                                    </span>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br><br><br><br>
-                <div class="D3">
-                    <img src="Img/Logo.png" class="mainlogo">
-                    <p12>© 2023 <a href="Index.html"><span>Hub-Verse</span></a> Powered By Snkumar</p12>
-                </div>
-            </div>
+            <textarea name="message" id="message" rows="5" placeholder="How can we help?" required></textarea>
+            <button type="submit" id="submit">Submit</button>
+          </form>
         </div>
 
-        <script src="Js/app.js"></script>
-    
-    <script>
+        <!-- Right: Info -->
+        <div class="contact-info">
+          <h3>Contact Info</h3>
+          <p><i class="fa fa-phone"></i> +91 937 393 7166</p>
+          <p><i class="fa fa-envelope"></i> hubverse@gmail.com</p>
+
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-google"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Your Company. All rights reserved.
+  </footer>
+
+  <!-- JavaScript Logic -->
+  <script>
+    // Function to handle search
+    function handleSearch(event) {
+      event.preventDefault();
+      const input = document.getElementById('searchInput').value.trim();
+      if (input) {
+        alert('Searching for: ' + input);
+        // You can replace this alert with actual search logic or redirection
+        // window.location.href = `/courses.html?search=${encodeURIComponent(input)}`;
+      } else {
+        alert('Please enter a course name to search.');
+      }
+    }
+
+    // Function to redirect to login page
+    function redirectToLogin() {
+      window.location.href = 'Login.html';
+    }
+
+    // Function to handle contact form submission
     document.addEventListener('DOMContentLoaded', function () {
         const form = document.getElementById('/contact');
       
@@ -340,72 +632,6 @@
           .catch((error) => console.error('Error:', error));
         });
       });
-    </script>
-    <script>
-        function handleSearch() {
-          // Get the selected option value
-          var selectedOption = document.getElementById('searchInput').value;
-    
-          // Check if the selected option matches any known values
-          switch (selectedOption) {
-            case 'Html':
-              window.location.href = '../public/Subjects/IT & Software/HTML5.html';
-              break;
-            case 'DataBase':
-              window.location.href = '../public/Subjects/IT & Software/DBMS.html';
-              break;
-            case 'Node.js':
-              window.location.href = '../public/Subjects/IT & Software/Node js.html';
-              break;
-            case 'JavaScript':
-              window.location.href = '../public/Subjects/IT & Software/JavaScript.html';
-              break;
-            case 'Swift':
-              window.location.href = '../public/Subjects/IT & Software/Swift.html';
-              break;
-            case 'C#':
-              window.location.href = '../public/Subjects/IT & Software/C#.html';
-              break;
-            case 'C++':
-              window.location.href = '../public/Subjects/IT & Software/C++.html';
-              break;
-            case 'Ruby':
-              window.location.href = '../public/Subjects/IT & Software/Ruby.html';
-              break;
-            case 'Robotics':
-              window.location.href = '../public/Subjects/AI/Robotics and AI.html';
-              break;
-            case 'C':
-              window.location.href = '../public/Subjects/IT & Software/C.html';
-              break;
-            case 'Php':
-              window.location.href = '../public/Subjects/IT & Software/Php.html';
-              break;
-            case 'Advance Java':
-              window.location.href = '../public/Subjects/IT & Software/Advance Java.html';
-              break;
-            case 'Java':
-              window.location.href = '../public/Subjects/IT & Software/Core Java.html';
-              break;
-            case 'Angular.JS':
-              window.location.href = '../public/Subjects/IT & Software/Angular JS.html';
-              break;
-            case 'CSS':
-              window.location.href = '../public/Subjects/IT & Software/CSS.html';
-              break;
-            case 'MySql':
-              window.location.href = '../public/Subjects/IT & Software/MySql.html';
-              break;
-            case 'Python':
-              window.location.href = '../public/Subjects/IT & Software/Python.html';
-              break;
-            default:
-              // Handle the default case or do nothing
-              break;
-          }
-    
-          // Prevent the form from submitting in the traditional way
-          return false;
-        }
-      </script>
-</body></html>
+  </script>
+</body>
+</html>
