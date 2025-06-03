@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: false }));
 
 // Page Routes
-app.get("/index", (_, res) => res.sendFile(path.join(__dirname, "public", "Index.html")));
+app.get("/index", (_, res) => res.sendFile(path.join(__dirname, "public", "index.html")));
 app.get("/about", (_, res) => res.sendFile(path.join(__dirname, "public", "About.html")));
 app.get("/category", (_, res) => res.sendFile(path.join(__dirname, "public", "All Category.html")));
 app.get("/courses", (_, res) => res.sendFile(path.join(__dirname, "public", "Courses.html")));

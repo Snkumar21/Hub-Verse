@@ -155,28 +155,57 @@
       width: fit-content;
     }
 
-    .teachers, .slider-bar {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .teacher-card, .slide {
-      background: rgba(0, 188, 212, 0.2);
-      border-radius: 15px;
-      padding: 20px;
-      width: 220px;
+    /* Courses Slider */
+    #slider {
+      padding: 40px 20px;
       text-align: center;
-      color: #252c54;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
     }
 
-    .teacher-card:hover, .slide:hover {
-      background-color: #00bcd4;
-      color: white;
+    .slider-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .course-box {
+      background: rgba(0, 188, 212, 0.4);;
+      color: #fff;
+      border-radius: 20px;
+      padding: 20px;
+      width: 200px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .course-box:hover {
+      transform: translateY(-10px);
+    }
+
+    .course-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 15px;
+      display: block;
+    }
+
+    .course-box h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .course-box a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .course-box a:hover {
+      text-decoration: underline;
     }
 
     /* Teachers Grid Layout */
@@ -348,6 +377,7 @@
       color: #fff;
       font-size: 22px;
     }
+
     /* Responsive Design */
     @media (max-width: 768px) {
       .contact-content {
@@ -428,7 +458,7 @@
 </head>
 <body>
   <header>
-      <div class="logo" tabindex="0">
+      <div class="logo" tabindex="0" onclick="redirectToHome()">
           <img src="Img/Logo1.png" alt="HubVerse Logo" class="logo-image" />
           HubVerse
       </div>
@@ -436,7 +466,7 @@
           <a href="index.html" class="nav">Home</a>
           <a href="About.html" class="nav">About</a>
           <a href="Courses.html" class="nav">Courses</a>
-          <a href="index.html/#contact" class="nav">Contact</a>
+          <a href="#contact" class="nav">Contact</a>
           <a href="Review.html" class="nav">Reviews</a>
       </nav>
       <button class="join-btn" id="join-btn" onclick="redirectToLogin()" aria-label="Join Now">Join Now</button>
@@ -503,32 +533,68 @@
     <section id="slider" aria-labelledby="slider-heading">
       <h2 id="slider-heading">Top Courses</h2>
       <div class="slider-bar">
-        <div class="slide" tabindex="0">
-          HTML5
+        <div class="course-box">
+          <img src="Img/HTML.jpg" alt="HTML Course" class="course-img" />
+          <h3>HTML5</h3>
+          <a href="#">Learn More</a>
         </div>
-        <div class="slide" tabindex="0">
-          CSS
+
+        <div class="course-box">
+          <img src="Img/CSS.jpg" alt="CSS Course" class="course-img" />
+          <h3>CSS</h3>
+          <a href="#">Learn More</a>
         </div>
-        <div class="slide" tabindex="0">
-          JavaScript
+
+        <div class="course-box">
+          <img src="Img/JS.jpg" alt="JavaScript Course" class="course-img" />
+          <h3>JavaScript</h3>
+          <a href="#">Learn More</a>
         </div>
-        <div class="slide" tabindex="0">
-          Java
+
+        <div class="course-box">
+          <img src="Img/Java.jpg" alt="Java Course" class="course-img" />
+          <h3>Java</h3>
+          <a href="#">Learn More</a>
         </div>
-        <div class="slide" tabindex="0">
-          React.js
+
+        <div class="course-box">
+          <img src="Img/react-js.jpg" alt="React.js Course" class="course-img" />
+          <h3>React.js</h3>
+          <a href="#">Learn More</a>
         </div>
-        <div class="slide" tabindex="0">
-          Node.js
+
+        <div class="course-box">
+          <img src="Img/Nodejs.jpg" alt="Node.js Course" class="course-img" />
+          <h3>Node.js</h3>
+          <a href="#">Learn More</a>
         </div>
-        <div class="slide" tabindex="0">
-          Vue.js
+
+        <div class="course-box">
+          <img src="Img/Ruby.jpg" alt="Ruby Course" class="course-img" />
+          <h3>Ruby</h3>
+          <a href="#">Learn More</a>
         </div>
-        <div class="slide" tabindex="0">
-          Android
+
+        <div class="course-box">
+          <img src="Img/Android.jpg" alt="Android Course" class="course-img" />
+          <h3>Android</h3>
+          <a href="#">Learn More</a>
+        </div>
+
+        <div class="course-box">
+          <img src="Img/Swift.jpg" alt="Swift Course" class="course-img" />
+          <h3>Swift</h3>
+          <a href="#">Learn More</a>
+        </div>
+
+        <div class="course-box">
+          <img src="Img/Python.jpg" alt="Python Course" class="course-img" />
+          <h3>Python</h3>
+          <a href="#">Learn More</a>
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Contact Section -->
@@ -597,6 +663,11 @@
     // Function to redirect to login page
     function redirectToLogin() {
       window.location.href = 'Login.html';
+    }
+
+    // Function to redirect to home page
+    function redirectToHome() {
+      window.location.href = 'index.html';
     }
 
     // Function to handle contact form submission
