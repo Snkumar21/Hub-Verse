@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: false }));
 // Page Routes
 app.get("/index", (_, res) => res.sendFile(path.join(__dirname, "public", "Index.html")));
 app.get("/about", (_, res) => res.sendFile(path.join(__dirname, "public", "About.html")));
-app.get("/cateogry", (_, res) => res.sendFile(path.join(__dirname, "public", "All Cateogry.html")));
+app.get("/category", (_, res) => res.sendFile(path.join(__dirname, "public", "All Category.html")));
 app.get("/courses", (_, res) => res.sendFile(path.join(__dirname, "public", "Courses.html")));
 app.get("/forgot", (_, res) => res.sendFile(path.join(__dirname, "public", "Forgot.html")));
 app.get("/submit", (_, res) => res.sendFile(path.join(__dirname, "public", "Login.html")));
