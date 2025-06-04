@@ -80,6 +80,22 @@
       color: white;
     }
 
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+
+    .logo-image {
+      height: 40px;
+      width: 40px;
+      object-fit: contain;
+    }
+
     /* Main Content */
     main {
       width: 90%;
@@ -138,6 +154,17 @@
       font-weight: bold;
     }
 
+    /* Footer */
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      text-align: center;
+      font-size: 14px;
+      color: #bbb;
+    }
+
     @media (max-width: 768px) {
       .about {
         flex-direction: column;
@@ -157,124 +184,6 @@
         flex-direction: column;
         margin-top: 10px;
       }
-    }
-
-    /* Responsive design */
-    .about-hero {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 60px 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
-      text-align: center;
-      margin: 40px auto 20px;
-    }
-
-    .about-hero h1 {
-      font-size: 36px;
-      margin-bottom: 15px;
-      color: #00bcd4;
-    }
-
-    .about-hero p {
-      font-size: 18px;
-      color: #f0f0f0;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .mission-section,
-    .team-section {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 40px 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
-      margin: 20px auto;
-      max-width: 1200px;
-    }
-
-    .mission-section h2,
-    .team-section h2 {
-      font-size: 28px;
-      color: #00bcd4;
-      margin-bottom: 15px;
-      border-bottom: 2px solid #00bcd4;
-      padding-bottom: 8px;
-      width: fit-content;
-    }
-
-    .mission-section p {
-      font-size: 17px;
-      color: #eee;
-      line-height: 1.6;
-      margin-top: 10px;
-    }
-
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      margin-top: 30px;
-    }
-
-    .team-card {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 25px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
-      transition: transform 0.3s ease, background-color 0.3s ease;
-    }
-
-    .team-card:hover {
-      background-color: #00bcd4;
-      color: white;
-      transform: translateY(-5px);
-    }
-
-    .team-card img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 15px;
-      border: 3px solid #00bcd4;
-    }
-
-    .team-card h3 {
-      font-size: 20px;
-      margin-bottom: 5px;
-      color: #00bcd4;
-    }
-
-    .team-card p {
-      font-size: 16px;
-      color: #f0f0f0;
-    }
-
-    /* Responsive Tweaks */
-    @media (max-width: 768px) {
-      .about-hero h1 {
-        font-size: 28px;
-      }
-
-      .about-hero p {
-        font-size: 16px;
-      }
-
-      .team-card {
-        padding: 20px;
-      }
-    }
-
-    /* Footer */
-    footer {
-      margin-top: auto;
-      padding: 20px;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.3);
-      text-align: center;
-      font-size: 14px;
-      color: #bbb;
     }
   </style>
 </head>
