@@ -106,7 +106,7 @@
       gap: 40px;
     }
 
-    .hero, .about, .quote {
+    .hero, .quote {
       background: rgba(255 255 255 / 0.1);
       padding: 30px;
       border-radius: 12px;
@@ -115,15 +115,30 @@
       color: white;
     }
 
-    .hero h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
+    .hero h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #00bcd4;
+      display: inline-block;
+      padding-bottom: 8px;
+      width: fit-content;
     }
 
     .hero p {
       font-size: 18px;
       max-width: 700px;
       margin: auto;
+    }
+
+    .about {
+      background: rgba(255 255 255 / 0.1);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+      text-align: center;
+      color: white;
+      display: flex;
+      flex-direction: row;
     }
 
     .about img {
@@ -133,11 +148,17 @@
 
     .about-text {
       max-width: 600px;
+      margin-left: 10%;
+      text-align: right;
     }
 
     .about-text h2 {
       font-size: 28px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #00bcd4;
+      padding-bottom: 8px;
+      width: fit-content;
+      display: inline-block;
     }
 
     .about-text p {
@@ -156,7 +177,7 @@
 
     /* Footer */
     footer {
-      margin-top: auto;
+      margin-top: 20px;
       padding: 20px;
       width: 100%;
       background: rgba(0, 0, 0, 0.3);
@@ -198,7 +219,7 @@
           <a href="index.html" class="nav">Home</a>
           <a href="About.html" class="nav">About</a>
           <a href="Courses.html" class="nav">Courses</a>
-          <a href="#contact" class="nav">Contact</a>
+          <a href="index.html#contact" class="nav">Contact</a>
           <a href="Review.html" class="nav">Reviews</a>
       </nav>
       <button class="join-btn" id="join-btn" onclick="redirectToLogin()" aria-label="Join Now">Join Now</button>
@@ -206,7 +227,7 @@
 
   <main>
     <section class="hero">
-      <h1>About Us</h1>
+      <h2>About Us</h2>
       <p>At HubVerse, we aim to revolutionize education by delivering flexible, accessible, and affordable learning for everyone. Discover our vision and impact below.</p>
     </section>
 
