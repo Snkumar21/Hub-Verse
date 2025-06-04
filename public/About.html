@@ -1,217 +1,338 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"></head><head><title>MindVerse</title>
-  
-    <script src="Js/angular.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/css.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <div class="Main">
-      <div clas="Top">
-        <div class="U1">
-            <div class="left1">
-                <i class="fa fa-phone"></i>
-                  <p1>+91 937 393 7166 &nbsp;&nbsp; <b>|</b> &nbsp;&nbsp;
-                <i class="fa fa-envelope"></i>
-                <p1>hubverse@gmail.com
-            </p1></p1></div>
-            <div class="right1">
-                <a href="google.com" class="link"><i class="fa fa-google"></i></a>
-                <a href="http://instagram.com/snkumar_19?igshid=Yjk4NWM2ZWVkMw==" class="link"><i class="fa fa-instagram"></i></a>
-                <a href="linkedin.com/in/singh-nitish-ku-ajit-kumar" class="link"><i class="fa fa-linkedin"></i></a>
-                <a href="twitter.com/snkumar30?t=Vs4dcv6cqt8sCoG9sqCXfQ&amp;s=09" class="link"><i class="fa fa-twitter"></i></a>
-                <a href="https://www.facebook.com/Snk6926" class="link"><i class="fa fa-facebook"></i></a>
-            </div>
-        </div>
-        <div class="D1">
-            <div class="left2">
-                <img src="Img/Logo1.png" class="logo">&nbsp;&nbsp;
-                <a href="Index.html" class="tagline"><b>HUB-VERSE</b></a><br>
-                <p2>e-learning for all
-            </p2></div>
-            <div class="right2">
-                <a href="index.html" class="nav">Home</a>
-                <a href="About.html" class="nav">About</a>
-                <a href="Courses.html" class="nav">Courses</a>
-                <a href="index.html#contact" class="nav">Contact</a>
-                <a href="Review.html" class="nav">Reviews</a>
-                <a href="Login.html" class="join">Join Us</a>
-            </div>
-        </div>
-    </div>
-    <div class="Middle">
-        <div class="U5">
-          <br><br><br><br><br><br>
-          <br><br><br><br><br><br><br>
-          <a href="About.html" class="h1"><span>About US</span></a>
-          <br><br><br><br><br><br>
-          <br><br><br><br><br><br><br>
-        </div>
-        <div class="U6">
-          <div class="U7">
-            <h4><span>Who <br>We Are?</span></h4>
-            <br>
-            <h5>We Are A Full Service Of Education</h5>
-          </div>
-          <div class="D7">
-            <div class="left5">
-              <img src="Img/3.jpg" class="img4">
-            </div>
-            <div class="right5">
-              <p13>
-                Education is the transmission of knowledge, skills, and
-                character traits.<br>
-                Online Education is the new age change that students are
-                adapting to <br>
-                gracefully and the benefits of online education in today's world
-                are <br>endless.<br>
-                Online education gives educators a prospect to reach students
-                who may <br>
-                not be competent to enrol in a traditional classroom course and
-                supports <br>
-                students who require to work on their schedule and at their own
-                pace.<br><br><br>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About | HubVerse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-                Although there is no fee for the course, students get to cut
-                down on extra
-                <br>fees they pay for classrooms, amenities, hostels, meals,
-                etc. <br>Another cost students save via online Education is
-                textbooks, the <br>availability of cheaper digital books cuts
-                down hefty expenditure on <br>textbooks. <br>Also, many
-                universities and colleges provide distance learning
-                <br>scholarships which make the fee very cheap from us.<br><br><br>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
 
-                We have developed our image like a huge education market. It is
-                not to <br>be brave to be huge but becoming huge by nature is
-                a great perspective <br>towards the great society.<br>
-                As more children get education is our dream, our goal, our aim.
-                Join <br>Our dream join our perspective towards the
-                society.<br><br>
-              </p13>
-            </div>
-          </div>
-        </div>
-        <br><br><br>
-        <div class="U8">
-          <div class="left6">
-            <p14>
-              "The function of education is to teach one to think
-              <br>intensively and to think critically. Intelligence plus
-              <br>character - that is the goal of true education."
-            </p14>
-            <br><br>
-            <p15><b>- Martin Luther King Jr.</b></p15>
-            <br><br><br>
-          </div>
-          <div class="right6">
-            <img src="Img/4.jpg" class="img5">
-          </div>
-        </div>
-        <br><br><br>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(to right, #252c54, #4b6cb7);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Style the header */
+    header {
+      width: 100%;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    header .logo {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    .join-btn {
+      background-color: #00bcd4;
+      border: none;
+      padding: 8px 18px;
+      font-size: 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      color: #252c54;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .join-btn:hover {
+      background-color: #028a9b;
+      color: white;
+    }
+
+    /* Main Content */
+    main {
+      width: 90%;
+      max-width: 1200px;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .hero, .about, .quote {
+      background: rgba(255 255 255 / 0.1);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+      text-align: center;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .about img {
+      max-width: 400px;
+      border-radius: 15px;
+    }
+
+    .about-text {
+      max-width: 600px;
+    }
+
+    .about-text h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .about-text p {
+      line-height: 1.7;
+    }
+
+    section.quote p {
+      font-size: 18px;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    section.quote span {
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .about {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about img {
+        width: 100%;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+    }
+
+    /* Responsive design */
+    .about-hero {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 60px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+      text-align: center;
+      margin: 40px auto 20px;
+    }
+
+    .about-hero h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      color: #00bcd4;
+    }
+
+    .about-hero p {
+      font-size: 18px;
+      color: #f0f0f0;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .mission-section,
+    .team-section {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+      margin: 20px auto;
+      max-width: 1200px;
+    }
+
+    .mission-section h2,
+    .team-section h2 {
+      font-size: 28px;
+      color: #00bcd4;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #00bcd4;
+      padding-bottom: 8px;
+      width: fit-content;
+    }
+
+    .mission-section p {
+      font-size: 17px;
+      color: #eee;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .team-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .team-card:hover {
+      background-color: #00bcd4;
+      color: white;
+      transform: translateY(-5px);
+    }
+
+    .team-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 3px solid #00bcd4;
+    }
+
+    .team-card h3 {
+      font-size: 20px;
+      margin-bottom: 5px;
+      color: #00bcd4;
+    }
+
+    .team-card p {
+      font-size: 16px;
+      color: #f0f0f0;
+    }
+
+    /* Responsive Tweaks */
+    @media (max-width: 768px) {
+      .about-hero h1 {
+        font-size: 28px;
+      }
+
+      .about-hero p {
+        font-size: 16px;
+      }
+
+      .team-card {
+        padding: 20px;
+      }
+    }
+
+    /* Footer */
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      text-align: center;
+      font-size: 14px;
+      color: #bbb;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+      <div class="logo" tabindex="0" onclick="redirectToHome()">
+          <img src="Img/Logo1.png" alt="HubVerse Logo" class="logo-image" />
+          HubVerse
       </div>
-      <div class="Lower">
-        <div class="U3">
-          <div class="contact" id="contact">
-            <div class="U4">
-                <p7><b><span>Get In Touch</span></b></p7><br><br>
-                <p8>Don't be shy. Give us a call or drop us a line.</p8><br>
-                <p8>Let's make some magic together.</p8><br>
-            </div>
-        <br><br>
-            <div class="D4">
-                <div class="left4"><br>
-                    <p9><b>Send a Message</b></p9><br><br>
+      <nav aria-label="Primary Navigation">
+          <a href="index.html" class="nav">Home</a>
+          <a href="About.html" class="nav">About</a>
+          <a href="Courses.html" class="nav">Courses</a>
+          <a href="#contact" class="nav">Contact</a>
+          <a href="Review.html" class="nav">Reviews</a>
+      </nav>
+      <button class="join-btn" id="join-btn" onclick="redirectToLogin()" aria-label="Join Now">Join Now</button>
+  </header>
 
-                    <form action="/contact" id="/contact" method="post">
-                            <input type="text" id="fname" name="fname" placeholder="First Name" class="input" style="width: 250px;" required="">                                
-                                    
-                            <input type="text" id="lname" name="lname" placeholder="Last Name" class="input" style="width: 250px;" required="">
-                                    <br><br>
-                            <input type="email" id="cemail" name="cemail" placeholder="Email" class="input" style="width: 250px;" required="">
+  <main>
+    <section class="hero">
+      <h1>About Us</h1>
+      <p>At HubVerse, we aim to revolutionize education by delivering flexible, accessible, and affordable learning for everyone. Discover our vision and impact below.</p>
+    </section>
 
-                            <input type="number" id="uphone" name="uphone" placeholder="Phone" class="input" style="width: 250px;" required="">
-                                    <br><br>
-                            <textarea id="message" name="message" placeholder="How can we help?" class="input" style="width: 540px;" required=""></textarea>
-                                    <br><br><br>
-                            <input type="submit" class="submit1" value="submit" placeholder="Submit">
-                    </form>
-                </div>
-                <div class="right4">
-                    <div class="info"><br>
-                        <p10><b>Contact Info</b></p10><br><br>
-
-                        <i class="fa fa-phone" style="font-size: 20px; color: white; margin-left: 30px;"></i>
-                        <p11>+91 937 393 7166</p11>
-
-                            <br><br>
-
-                        <i class="fa fa-envelope" style="font-size: 20px; color: white; margin-left: 30px;"></i>
-                        <p11>hubverse@gmail.com</p11>
-                            
-                            <br><br><br>
-                        
-                        <span class="fa-stack fa-1x">
-                            <i class="fa fa-circle fa-stack-1x c2"></i>
-                            <i class="fa fa-facebook fa-stack-1x c1"></i>
-                        </span>&nbsp;
-                        <span class="fa-stack fa-1x">
-                            <i class="fa fa-circle fa-stack-1x c2"></i>
-                            <i class="fa fa-google fa-stack-1x c1"></i>
-                        </span>&nbsp;
-                        <span class="fa-stack fa-1x">
-                            <i class="fa fa-circle fa-stack-1x c2"></i>
-                            <i class="fa fa-twitter fa-stack-1x c1"></i>
-                        </span>&nbsp;
-                        <span class="fa-stack fa-1x">
-                            <i class="fa fa-circle fa-stack-1x c2"></i>
-                            <i class="fa fa-linkedin fa-stack-1x c1"></i>
-                        </span>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br><br><br><br>
-        <div class="D3">
-          <img src="Img/Logo.png" class="mainlogo">
-          <p12>© 2023 <a href="Index.html"><span>Hub-Verse</span></a> Powered By Snkumar</p12>
-        </div>
+    <section class="about">
+      <img src="Img/3.jpg" alt="About Us Image" />
+      <div class="about-text">
+        <h2>Who We Are</h2>
+        <p>
+          We are a passionate team dedicated to empowering learners through online education. HubVerse offers a flexible platform that enables students to learn at their own pace, anytime and anywhere. Our mission is to make quality education accessible to all, regardless of location or background.<br><br>
+          With a wide range of free courses, digital resources, and support from experts, HubVerse is shaping the future of learning. Join us in building an inclusive educational ecosystem for tomorrow's innovators.
+        </p>
       </div>
-    </div>
-  
+    </section>
+
+    <section class="quote">
+      <p>"The function of education is to teach one to think intensively and critically. Intelligence plus character - that is the goal of true education."</p>
+      <span>- Martin Luther King Jr.</span>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Your Company. All rights reserved.
+  </footer>
+
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("/contact");
+    // Function to redirect to login page
+    function redirectToLogin() {
+      window.location.href = 'Login.html';
+    }
 
-      form.addEventListener("/submit", function (event) {
-        event.preventDefault();
-
-        const fname = document.getElementById("fname").value;
-        const lname = document.getElementById("lname").value;
-        const cemail = document.getElementById("cemail").value;
-        const uphone = document.getElementById("uphone").value;
-        const message = document.getElementById("message").value;
-
-        // Make a POST request to your server for form submission
-        fetch("/contact", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ fname, lname, phone, cemail, message }),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.success) {
-              alert("Message Submitted Successfully!");
-              form.reset(); // Reset the form after successful submission
-            } else {
-              alert("Error: " + data.message);
-            }
-          })
-          .catch((error) => console.error("Error:", error));
-      });
-    });
+    // Function to redirect to home page
+    function redirectToHome() {
+      window.location.href = 'index.html';
+    }
   </script>
-
-</div></body></html>
+</body>
+</html>
