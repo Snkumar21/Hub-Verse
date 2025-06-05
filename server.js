@@ -28,15 +28,12 @@ app.use(express.urlencoded({ extended: false }));
 
 // Page Routes
 app.get("/index", (_, res) => res.sendFile(path.join(__dirname, "public", "index.html")));
-app.get("/about", (_, res) => res.sendFile(path.join(__dirname, "public", "About.html")));
 app.get("/category", (_, res) => res.sendFile(path.join(__dirname, "public", "All Category.html")));
-app.get("/courses", (_, res) => res.sendFile(path.join(__dirname, "public", "Courses.html")));
+app.get("/courses", (_, res) => res.sendFile(path.join(__dirname, "public", "courses.html")));
 app.get("/forgot", (_, res) => res.sendFile(path.join(__dirname, "public", "Forgot.html")));
-app.get("/submit", (_, res) => res.sendFile(path.join(__dirname, "public", "Login.html")));
+app.get("/submit", (_, res) => res.sendFile(path.join(__dirname, "public", "login.html")));
 app.get("/signUp", (_, res) => res.sendFile(path.join(__dirname, "public", "signUp.html")));
-app.get("/review", (_, res) => res.sendFile(path.join(__dirname, "public", "Review.html")));
-app.get("/abroad", (_, res) => res.sendFile(path.join(__dirname, "public", "Abroad.html")));
-app.get("/ai", (_, res) => res.sendFile(path.join(__dirname, "public", "AI.html")));
+app.get("/review", (_, res) => res.sendFile(path.join(__dirname, "public", "review.html")));
 
 // POST: Sign Up Form
 app.post("/signupForm", (req, res) => {
