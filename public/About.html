@@ -4,98 +4,10 @@
   <meta charset="UTF-8" />
   <title>About | HubVerse</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: linear-gradient(to right, #252c54, #4b6cb7);
-      color: white;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    /* Style the header */
-    header {
-      width: 100%;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.3);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    header .logo {
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      cursor: pointer;
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: #f0f0f0;
-      text-decoration: none;
-      font-size: 18px;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #00bcd4;
-    }
-
-    .join-btn {
-      background-color: #00bcd4;
-      border: none;
-      padding: 8px 18px;
-      font-size: 16px;
-      border-radius: 25px;
-      cursor: pointer;
-      color: #252c54;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    .join-btn:hover {
-      background-color: #028a9b;
-      color: white;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      cursor: pointer;
-    }
-
-    .logo-image {
-      height: 40px;
-      width: 40px;
-      object-fit: contain;
-    }
-
     /* Main Content */
     main {
       width: 90%;
@@ -113,15 +25,6 @@
       box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
       text-align: center;
       color: white;
-    }
-
-    .hero h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
-      border-bottom: 2px solid #00bcd4;
-      display: inline-block;
-      padding-bottom: 8px;
-      width: fit-content;
     }
 
     .hero p {
@@ -152,15 +55,6 @@
       text-align: right;
     }
 
-    .about-text h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
-      border-bottom: 2px solid #00bcd4;
-      padding-bottom: 8px;
-      width: fit-content;
-      display: inline-block;
-    }
-
     .about-text p {
       line-height: 1.7;
     }
@@ -173,17 +67,6 @@
 
     section.quote span {
       font-weight: bold;
-    }
-
-    /* Footer */
-    footer {
-      margin-top: 20px;
-      padding: 20px;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.3);
-      text-align: center;
-      font-size: 14px;
-      color: #bbb;
     }
 
     @media (max-width: 768px) {

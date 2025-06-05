@@ -4,156 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <title>Responsive Index Page</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: linear-gradient(to right, #252c54, #4b6cb7);
-      color: white;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    /* Header */
-    header {
-      width: 100%;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.3);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    header .logo {
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      cursor: pointer;
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: #f0f0f0;
-      text-decoration: none;
-      font-size: 18px;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #00bcd4;
-    }
-
-    .join-btn {
-      background-color: #00bcd4;
-      border: none;
-      padding: 8px 18px;
-      font-size: 16px;
-      border-radius: 25px;
-      cursor: pointer;
-      color: #252c54;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    .join-btn:hover {
-      background-color: #028a9b;
-      color: white;
-    }
-
-    main {
-      width: 90%;
-      max-width: 1200px;
-      margin-top: 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      cursor: pointer;
-    }
-
-    .logo-image {
-      height: 40px;
-      width: 40px;
-      object-fit: contain;
-    }
-
-    /* Search Bar */
-    .search-bar {
-      display: flex;
-      width: 60%;
-      margin: 0 auto;
-      border-radius: 25px;
-      overflow: hidden;
-      box-shadow: 0 0 8px rgba(0, 188, 212, 0.6);
-    }
-
-    .search-bar input[type="text"] {
-      flex: 1;
-      padding: 12px 20px;
-      font-size: 18px;
-      border: none;
-      outline: none;
-      border-radius: 25px 0 0 25px;
-    }
-
-    .search-bar button[type="submit"] {
-      background-color: #00bcd4;
-      border: none;
-      padding: 0 25px;
-      font-size: 20px;
-      color: #252c54;
-      cursor: pointer;
-      border-radius: 0 25px 25px 0;
-      transition: background-color 0.3s ease;
-    }
-
-    .search-bar button[type="submit"]:hover {
-      background-color: #028a9b;
-      color: white;
-    }
-
     /* Sections */
     .hero, #slider, #teachers {
       background: rgba(255 255 255 / 0.1);
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
-    }
-
-    section h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
-      border-bottom: 2px solid #00bcd4;
-      padding-bottom: 8px;
-      width: fit-content;
     }
 
     /* Courses Slider */
@@ -390,17 +250,6 @@
       }
     }
 
-    /* Footer */
-    footer {
-      margin-top: auto;
-      padding: 20px;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.3);
-      text-align: center;
-      font-size: 14px;
-      color: #bbb;
-    }
-
     /* Responsive media queries */
     @media (max-width: 768px) {
       .search-bar {
@@ -476,32 +325,32 @@
   <main>
     <!-- Search Bar -->
     <section class="hero" id="home">
-    <div class="hero-content">
-      <form action="#" method="get" class="search-bar" onsubmit="handleSearch(event)">
-        <input type="text" name="search" list="input" placeholder="Search Courses" class="search" id="searchInput">
-        <datalist id="input">
-          <option value="Html5">Html5</option>
-          <option value="DataBase">DataBase</option>
-          <option value="Node.js">Node.js</option>
-          <option value="JavaScript">JavaScript</option>
-          <option value="Swift">Swift</option>
-          <option value="C#">C#</option>
-          <option value="C++">C++</option>
-          <option value="Ruby">Ruby</option>
-          <option value="C">C</option>
-          <option value="Php">Php</option>
-          <option value="Advance Java">Advance Java</option>
-          <option value="Java">Java</option>
-          <option value="Angular.JS">Angular.JS</option>
-          <option value="CSS">CSS</option>
-          <option value="MySql">MySql</option>
-          <option value="Robotics">Robotics</option>
-          <option value="Python">Python</option>
-        </datalist>
-        <button type="submit" class="submit">Search</button>
-      </form>
-    </div>
-  </section>
+      <div class="hero-content">
+        <form action="#" method="get" class="search-bar" onsubmit="handleSearch(event)">
+          <input type="text" name="search" list="input" placeholder="Search Courses" class="search" id="searchInput">
+          <datalist id="input">
+            <option value="Html5">Html5</option>
+            <option value="DataBase">DataBase</option>
+            <option value="Node.js">Node.js</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Swift">Swift</option>
+            <option value="C#">C#</option>
+            <option value="C++">C++</option>
+            <option value="Ruby">Ruby</option>
+            <option value="C">C</option>
+            <option value="Php">Php</option>
+            <option value="Advance Java">Advance Java</option>
+            <option value="Java">Java</option>
+            <option value="Angular.JS">Angular.JS</option>
+            <option value="CSS">CSS</option>
+            <option value="MySql">MySql</option>
+            <option value="Robotics">Robotics</option>
+            <option value="Python">Python</option>
+          </datalist>
+          <button type="submit" class="submit">Search</button>
+        </form>
+      </div>
+    </section>
 
     <!-- Teachers Section -->
     <section id="teachers" aria-labelledby="teachers-heading">
