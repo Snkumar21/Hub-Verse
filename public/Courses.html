@@ -15,6 +15,24 @@
       text-align: center;
     }
 
+    .btn {
+      background-color: #00bcd4;
+      color: #252c54;
+      font-weight: bold;
+      border: none;
+      padding: 12px;
+      border-radius: 15px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #028a9b;
+      color: white;
+    }
+
     .course-grid {
       display: flex;
       flex-wrap: wrap;
@@ -121,6 +139,7 @@
     <section class="course-section">
       <h2>📘 Our Top Courses</h2>
       <p>Explore top trending technologies and start learning today.</p>
+      <button class="btn" onclick="window.location.href = 'All Category.html';">Explore More Courses</button>
 
       <div class="course-grid">
         <div class="course-card">
