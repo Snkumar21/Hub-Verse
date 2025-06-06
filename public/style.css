@@ -30,6 +30,7 @@ header {
     gap: 10px;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 header .logo {
@@ -99,6 +100,13 @@ main {
     gap: 40px;
 }
 
+    section {
+        background: rgba(255 255 255 / 0.1);
+        padding: 40px 20px;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+    }
+
     section h2 {
         font-size: 28px;
         margin-bottom: 15px;
@@ -112,6 +120,26 @@ main {
     section p {
         font-size: 18px;
         color: #eee;
+    }
+
+    .btn {
+        width: 250px;
+        background-color: #00bcd4;
+        color: #252c54;
+        font-weight: bold;
+        border: none;
+        padding: 12px;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+        text-decoration: none;
+    }
+
+    .btn:hover {
+        background-color: #028a9b;
+        color: white;
     }
 
     /* Search Bar */

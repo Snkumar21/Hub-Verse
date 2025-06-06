@@ -1,364 +1,247 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="css/css.css" />
-    <script src="Js/angular.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="Js/Review.js" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Review - HubVerse</title>
+
+    <style>
+      .review-header .btn{
+        margin-bottom: 30px;
+        margin-left: 77%;
+      }
+
+      .review-header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .all-reviews {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .all-reviews .review-card {
+        background: rgba(0, 188, 212, 0.4);;
+        color: #fff;
+        border-radius: 20px;
+        padding: 20px;
+        width: 200px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+
+      .review-card i {
+        font-size: 3rem;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+
+      .reviewer-name {
+        font-size: 1.2rem;
+        margin: 10px 0;
+        font-weight: bold;
+      }
+
+      .review-text {
+        font-size: 1rem;
+        color: #ddd;
+      }
+
+      /* FORM + CONTACT */
+      .review-form-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: space-between;
+      }
+
+      .review-form-container, .contact-info {
+        flex: 1 1 450px;
+        background: rgba(0, 188, 212, 0.1);
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+      }
+
+      .review-form-container, .contact-info p {
+        font-size: 0.95rem;
+        color: #eee;
+        cursor: pointer;
+      }
+
+      #reviewForm input,
+      #reviewForm textarea {
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-family: inherit;
+      }
+
+      #reviewForm textarea {
+        height: 120px;
+        resize: vertical;
+      }
+
+      .contact-info i {
+        margin-right: 10px;
+        color: #00bcd4;
+        font-size: 1.2rem;
+        padding: 10px;
+      }
+
+      /* RESPONSIVE */
+      @media screen and (max-width: 768px) {
+        .review-form-section {
+          flex-direction: column;
+        }
+
+        .write-review-btn {
+          width: 80%;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div class="Main">
-      <div clas="Top">
-        <div class="U1">
-            <div class="left1">
-                <i class="fa fa-phone"></i>
-                 <p1>+91 937 393 7166 &nbsp;&nbsp; <b>|</b> &nbsp;&nbsp;</p61>
-                <i class="fa fa-envelope"></i>
-                <p1>hubverse@gmail.com</p61>
-            </div>
-            <div class="right1">
-                <a href="google.com" class="link"><i class="fa fa-google"></i></a>
-                <a href="http://instagram.com/snkumar_19?igshid=Yjk4NWM2ZWVkMw==" class="link"><i class="fa fa-instagram"></i></a>
-                <a href="linkedin.com/in/singh-nitish-ku-ajit-kumar" class="link"><i class="fa fa-linkedin"></i></a>
-                <a href="twitter.com/snkumar30?t=Vs4dcv6cqt8sCoG9sqCXfQ&s=09" class="link"><i class="fa fa-twitter"></i></a>
-                <a href="https://www.facebook.com/Snk6926" class="link"><i class="fa fa-facebook"></i></a>
-            </div>
-        </div>
-        <div class="D1">
-          <div class="left2">
-              <img src="Img/Logo1.png" class="logo">&nbsp;&nbsp;
-              <a href="Index.html" class="tagline"><b>HUB-VERSE</b></a><br>
-              <p2>e-learning for all</p62>
-          </div>
-          <div class="right2">
-              <a href="index.html" class="nav">Home</a>
-              <a href="about.html" class="nav">About</a>
-              <a href="courses.html" class="nav">Courses</a>
-              <a href="index.html#contact" class="nav">Contact</a>
-              <a href="review.html" class="nav">Reviews</a>
-              <a href="login.html" class="join">Join Us</a>
-          </div>
-        </div>
+    <!-- Header -->
+    <header>
+      <div class="logo" tabindex="0" onclick="redirectToHome()">
+          <img src="Img/Logo1.png" alt="HubVerse Logo" class="logo-image" />
+          HubVerse
       </div>
-      <div class="Middle">
-        <div class="U3">
-          <div class="com">
-            <p20
-              ><b>TOP-REVIEWS</b></p20
-            ><br />
-            <a href="#write"><button class="write">Write A Review</button></a>
+      <nav aria-label="Primary Navigation">
+          <a href="index.html" class="nav">Home</a>
+          <a href="about.html" class="nav">About</a>
+          <a href="courses.html" class="nav">Courses</a>
+          <a href="index.html#contact" class="nav">Contact</a>
+          <a href="review.html" class="nav">Reviews</a>
+      </nav>
+      <button class="join-btn" id="join-btn" onclick="redirectToLogin()" aria-label="Join Now">Join Now</button>
+    </header>
+
+    <!-- Main Content --> 
+    <main>
+      <section class="review-header">
+        <h2 class="section-title">📢 Top Reviews</h2>
+        <a href="#write" class="btn">Write A Review</a>
+
+        <div class="all-reviews">
+          <div class="review-card">
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+            <h3 class="reviewer-name">John Doe</h3>
+            <p class="review-text">HubVerse is an amazing platform for learning!</p>
           </div>
-
-          <div class="reviews" id="reviewsSection">
-            <div class="box5" id="reviews">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
-              <h6></h6>
-              <p21></p21>
-            </div>
-
-            <div class="box5" id="reviews">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
-              <h6></h6>
-              <p21></p21>
-            </div>
-
-            <div class="box5" id="reviews">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
-              <h6></h6>
-              <p21></p21>
-            </div>
+          <div class="review-card">
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+            <h3 class="reviewer-name">Jane Smith</h3>
+            <p class="review-text">The UI is clean, and the resources are very helpful.</p>
           </div>
-          <div class="reviews" id="reviewsSection">
-            <div class="box5" id="reviews">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
-              <h6></h6>
-              <p21></p21>
-            </div>
-
-            <div class="box5" id="reviews">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
-              <h6></h6>
-              <p21></p21>
-            </div>
-
-            <div class="box5" id="reviews">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
-              <h6></h6>
-              <p21></p21>
-            </div>
+          <div class="review-card">
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+            <h3 class="reviewer-name">Jane Smith</h3>
+            <p class="review-text">The UI is clean, and the resources are very helpful.</p>
           </div>
-
-          <div class="reviews" id="reviewsSection">
-            <div class="box5" id="reviews">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
-              <h6></h6>
-              <p21></p21>
-            </div>
-
-            <div class="box5" id="reviews">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
-              <h6></h6>
-              <p21></p21>
-            </div>
-
-            <div class="box5" id="reviews">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
-              <h6></h6>
-              <p21></p21>
-            </div>
+          <div class="review-card">
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+            <h3 class="reviewer-name">Jane Smith</h3>
+            <p class="review-text">The UI is clean, and the resources are very helpful.</p>
           </div>
-
-          <div class="reviews" id="reviewsSection">
-            <div class="box5" id="reviews">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
-              <h6></h6>
-              <p21></p21>
-            </div>
-
-            <div class="box5" id="reviews">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
-              <h6></h6>
-              <p21></p21>
-            </div>
-
-            <div class="box5" id="reviews">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
-              <h6></h6>
-              <p21></p21>
-            </div>
+          <div class="review-card">
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+            <h3 class="reviewer-name">Jane Smith</h3>
+            <p class="review-text">The UI is clean, and the resources are very helpful.</p>
           </div>
         </div>
-        <div class="U3">
-          <div class="s" id="write">
-            <div class="left7">
-              <h7>Contact Us</h7>
-              <br /><br />
+      </section>
 
-              <i class="fa fa-envelope"></i>
-              <p22>hubverse@gmail.com</p22>
-              <br /><br /><br />
-
-              <i class="fa fa-phone"></i>
-              <p22>+91 937 393 7166</p22>
-              <br /><br /><br />
-
-              <i class="fa fa-map-marker" style="margin-left: 37px"></i>
-              <p22
-                >23, Near Wadia Base, <br /><font style="margin-left: 78px"
-                  >Pune, 412278</font
-                ></p22
-              >
-              <br /><br /><br />
-            </div>
-            <div class="right7">
-              <br /><br /><br />
-              <p23><b>Give Us A Review</b></p23>
-                <br />
-              <p24>Let us make changes according to you and for you</p24>
-              <br /><br /><br />
-              <form id="/reviewForm" action="/reviewForm" method="post">
-                <input
-                  type="text"
-                  name="reviewname"
-                  id="reviewname"
-                  class="n1"
-                  placeholder="Your Name"
-                  required
-                />
-                <br /><br />
-                <input
-                  type="email"
-                  name="reviewemail"
-                  id="reviewemail"
-                  class="n1"
-                  placeholder="Your Email"
-                  required
-                />
-                <br /><br />
-                <textarea
-                  type="text"
-                  name="reviewText"
-                  id="reviewText"
-                  class="textarea"
-                  placeholder="Type your message here..."
-                  required
-                ></textarea>
-                <br /><br />
-                <button
-                  class="send"
-                  id="submitReview"
-                  type="submit"
-                  value="submit"
-                  required
-                >
-                  Send
-                </button>
-              </form>
-            </div>
-          </div>
+      <!-- Contact and Review Form Section -->
+      <section class="review-form-section" id="write">
+        <div class="review-form-container">
+          <h2>📝 Give Us a Review</h2>
+          <p>Let us make changes according to you and for you</p>
+          <form id="reviewForm" action="/reviewForm" method="post">
+            <input type="text" name="reviewname" id="reviewname" placeholder="Your Name" required />
+            <input type="email" name="reviewemail" id="reviewemail" placeholder="Your Email" required />
+            <textarea name="reviewText" id="reviewText" placeholder="Type your message here..." required ></textarea>
+            <button type="submit" class="btn">Send</button>
+          </form>
         </div>
-      </div>
-      <div class="Lower">
-        <div class="U3">
-          <div class="contact" id="contact">
-            <div class="U4">
-              <p7><b><span>Get In Touch</span></b></p7><br><br>
-              <p8>Don't be shy. Give us a call or drop us a line.</p8><br>
-              <p8>Let's make some magic together.</p8><br>
-            </div>
-          <br><br>          
-            <div class="D4">
-                <div class="left4"><br>
-                  <p9><b>Send a Message</b></p9><br><br>
-                    <form action="/contact" id="/contact" method="post">
-                      <input type="text" id="fname" name="fname" placeholder="First Name" class="input" style="width: 250px;"  required>
-                      <input type="text" id="lname" name="lname" placeholder="Last Name" class="input" style="width: 250px;" required>
-                        <br><br>
-                      <input type="email" id="cemail" name="cemail" placeholder="Email" class="input" style="width: 250px;" required>
-                      <input type="number" id="uphone" name="uphone" placeholder="Phone" class="input" style="width: 250px;" required>
-                        <br><br>
-                      <textarea id="message" name="message" placeholder="How can we help?" class="input" style="width: 540px;" required></textarea>
-                        <br><br><br>
-                      <input type="submit" class="submit1" value="submit" placeholder="Submit">
-                    </form>
-                </div>
-                <div class="right4">
-                    <div class="info"><br>
-                        <p10><b>Contact Info</b></p10><br><br>
 
-                        <i class="fa fa-phone" style="font-size: 20px; color: white; margin-left: 30px;"></i>
-                        <p11>+91 937 393 7166</p11>
-
-                            <br><br>
-
-                        <i class="fa fa-envelope" style="font-size: 20px; color: white; margin-left: 30px;"></i>
-                        <p11>hubverse@gmail.com</p11>
-                            
-                            <br><br><br>
-                        
-                        <span class="fa-stack fa-1x">
-                            <i class="fa fa-circle fa-stack-1x c2"></i>
-                            <i class="fa fa-facebook fa-stack-1x c1"></i>
-                        </span>&nbsp;
-                        <span class="fa-stack fa-1x">
-                            <i class="fa fa-circle fa-stack-1x c2"></i>
-                            <i class="fa fa-google fa-stack-1x c1"></i>
-                        </span>&nbsp;
-                        <span class="fa-stack fa-1x">
-                            <i class="fa fa-circle fa-stack-1x c2"></i>
-                            <i class="fa fa-twitter fa-stack-1x c1"></i>
-                        </span>&nbsp;
-                        <span class="fa-stack fa-1x">
-                            <i class="fa fa-circle fa-stack-1x c2"></i>
-                            <i class="fa fa-linkedin fa-stack-1x c1"></i>
-                        </span>
-                        
-                    </div>
-                </div>
-            </div>
+        <div class="contact-info">
+          <h2>📬 Contact Us</h2>
+          <p><i class="fa fa-envelope"></i> hubverse@gmail.com</p>
+          <p><i class="fa fa-phone"></i> +91 937 393 7166</p>
+          <p><i class="fa fa-map-marker" style="font-size:24px"></i> 23, Near Wadia Base, Pune, 412278</p>
         </div>
-        <br /><br /><br /><br />
-        <div class="D3">
-          <img src="Img/Logo.png" class="mainlogo" />
-          <p12
-            >&copy; 2023 <a href="Index.html"><span>Hub-Verse</span></a> Powered
-            By Snkumar</p12
-          >
-        </div>
-      </div>
-    </div>
-  </body>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const reviewForm = document.getElementById("/reviewForm");
+      </section>
+    </main>
 
-      reviewForm.addEventListener("/submit", function (event) {
-        event.preventDefault();
+    <!-- Footer -->
+    <footer>
+      &copy; 2025 Your Company. All rights reserved.
+    </footer>
 
-        const reviewname = document.getElementById("reviewname").value;
-        const reviewemail = document.getElementById("reviewemail").value;
-        const reviewText = document.getElementById("reviewText").value;
+    <script>
+      /*document.addEventListener("DOMContentLoaded", function () {
+        const reviewForm = document.getElementById("reviewForm");
 
-        // Make a POST request to your server for form submission
-        fetch("/reviewForm", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ reviewname, reviewemail, reviewText }),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.success) {
-              alert("Review Submitted Successfully!");
-              reviewForm.reset(); // Reset the form after successful submission
-            } else {
-              alert("Error: " + data.message);
-            }
+        reviewForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const reviewname = document.getElementById("reviewname").value;
+          const reviewemail = document.getElementById("reviewemail").value;
+          const reviewText = document.getElementById("reviewText").value;
+
+          fetch("/reviewForm", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ reviewname, reviewemail, reviewText }),
           })
-          .catch((error) => console.error("Error:", error));
-      });
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.success) {
+                alert("Review Submitted Successfully!");
+                reviewForm.reset();
+              } else {
+                alert("Error: " + data.message);
+              }
+            })
+            .catch((error) => console.error("Error submitting review:", error));
+        });
 
-      document.addEventListener("DOMContentLoaded", function () {
-        const reviewsContainer = document.getElementById("reviews");
-
-        // Fetch reviews from the server
+        // Fetch and display reviews
         fetch("/get_reviews")
           .then((response) => response.json())
           .then((data) => {
+            const reviewsContainer = document.getElementById("reviewsSection");
+            reviewsContainer.innerHTML = ""; // Clear existing
+
             data.reviews.forEach((review) => {
-              const reviewBox = document.createElement("div");
-              reviewBox.classList.add("box");
+              const reviewCard = document.createElement("div");
+              reviewCard.classList.add("review-card");
 
-              reviewBox.innerHTML = `
-                        <i class="fa fa-user-circle" aria-hidden="true"></i>
-                        <h6>${review.rname}</h6>
-                        <p21>${review.rmessage}</p21>
-                    `;
+              reviewCard.innerHTML = `
+                <i class="fa fa-user-circle" aria-hidden="true"></i>
+                <h3 class="reviewer-name">${review.rname}</h3>
+                <p class="review-text">${review.rmessage}</p>
+              `;
 
-              reviewsContainer.appendChild(reviewBox);
+              reviewsContainer.appendChild(reviewCard);
             });
           })
           .catch((error) => console.error("Error fetching reviews:", error));
-      });
-    });
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("/contact");
-
-      form.addEventListener("/submit", function (event) {
-        event.preventDefault();
-
-        const fname = document.getElementById("fname").value;
-        const lname = document.getElementById("lname").value;
-        const cemail = document.getElementById("cemail").value;
-        const uphone = document.getElementById("uphone").value;
-        const message = document.getElementById("message").value;
-
-        // Make a POST request to your server for form submission
-        fetch("/contact", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ fname, lname, phone, cemail, message }),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.success) {
-              alert("Message Submitted Successfully!");
-              form.reset(); // Reset the form after successful submission
-            } else {
-              alert("Error: " + data.message);
-            }
-          })
-          .catch((error) => console.error("Error:", error));
-      });
-    });
-  </script>
+      });*/
+    </script>
+  </body>
 </html>
