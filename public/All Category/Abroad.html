@@ -7,6 +7,79 @@
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <title>HubVerse</title>
+
+  <style>
+    .slider-bar {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .course-box {
+      display: flex;
+      flex-direction: row;
+      background: rgba(0, 188, 212, 0.4);;
+      color: #fff;
+      border-radius: 20px;
+      padding: 20px;
+      width: 600px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .course-box:hover {
+      transform: translateY(-10px);
+    }
+
+    .course-img {
+      flex: 50%;
+      margin-top: 30px;
+      align-items: center;
+      justify-content: center;
+      justify-items: center;
+    }
+
+      .course-img img {
+        width: 150px;
+        height: 150px;
+        border-radius: 5%;
+        object-fit: cover;
+        display: block;
+      }
+
+    .course-text {
+      flex: 50%;
+      text-align: left;
+      margin: 30px;
+      cursor: pointer;
+    }
+
+      .course-text a {
+        margin: 10px 10px;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        margin-left: -10px;
+      }
+
+      .course-text a:hover {
+        text-decoration: underline;
+      }
+
+      .course-text p {
+        margin: 10px 10px;
+        font-size: 1.2rem;
+        color: #fff;
+        text-align: left;
+      }
+
+      .course-text p i {
+        margin-right: 5px;
+      }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -59,46 +132,61 @@
     <section id="slider" aria-labelledby="slider-heading">
       <div class="slider-bar">
         <div class="course-box">
-          <img src="../Img/Angular.jpg" alt="HTML Course" class="course-img" />
-          <h3>AI As A Service</h3>
-          <a href="../Subjects/AI/AI as a Service.html">Learn More</a>
+          <div class="course-img">
+            <img src="../Img/Angular.jpg" alt="HTML Course"/>
+          </div>
+          <div class="course-text">
+            <a href="../Subjects/AI/AI as a Service.html">AI as a Service</a>
+            <p><i class="fa fa-level-up" style="font-size: 15px; color: black" ></i>Beginner</p>
+            <p><i class="fa-solid fa-hourglass-half" style="font-size: 15px; color: black" ></i>2 hr</p>
+            <p><i class="fa fa-star" style="font-size: 15px; color: gold" ></i>4.8</p>
+            <p><i class="fa-regular fa-circle" style="font-size: 15px; color: grey" ></i>90.3k Enrolled</p>
+          </div>
         </div>
+
+        <div class="course-box">
+          <div class="course-img">
+            <img src="../Img/Angular.jpg" alt="HTML Course"/>
+          </div>
+          <div class="course-text">
+            <a href="../Subjects/AI/AI as a Service.html">AI as a Service</a>
+            <p><i class="fa fa-level-up" style="font-size: 15px; color: black" ></i>Beginner</p>
+            <p><i class="fa-solid fa-hourglass-half" style="font-size: 15px; color: black" ></i>2 hr</p>
+            <p><i class="fa fa-star" style="font-size: 15px; color: gold" ></i>4.8</p>
+            <p><i class="fa-regular fa-circle" style="font-size: 15px; color: grey" ></i>90.3k Enrolled</p>
+          </div>
+        </div>
+
+        <div class="course-box">
+          <div class="course-img">
+            <img src="../Img/Angular.jpg" alt="HTML Course"/>
+          </div>
+          <div class="course-text">
+            <a href="../Subjects/AI/AI as a Service.html">AI as a Service</a>
+            <p><i class="fa fa-level-up" style="font-size: 15px; color: black" ></i>Beginner</p>
+            <p><i class="fa-solid fa-hourglass-half" style="font-size: 15px; color: black" ></i>2 hr</p>
+            <p><i class="fa fa-star" style="font-size: 15px; color: gold" ></i>4.8</p>
+            <p><i class="fa-regular fa-circle" style="font-size: 15px; color: grey" ></i>90.3k Enrolled</p>
+          </div>
+        </div>
+
+        <div class="course-box">
+          <div class="course-img">
+            <img src="../Img/Angular.jpg" alt="HTML Course"/>
+          </div>
+          <div class="course-text">
+            <a href="../Subjects/AI/AI as a Service.html">AI as a Service</a>
+            <p><i class="fa fa-level-up" style="font-size: 15px; color: black" ></i>Beginner</p>
+            <p><i class="fa-solid fa-hourglass-half" style="font-size: 15px; color: black" ></i>2 hr</p>
+            <p><i class="fa fa-star" style="font-size: 15px; color: gold" ></i>4.8</p>
+            <p><i class="fa-regular fa-circle" style="font-size: 15px; color: grey" ></i>90.3k Enrolled</p>
+          </div>
+        </div>
+
+      </div>
+
         <div class="D2">
           <div class="left8">
-            <div class="box6">
-              <div class="left9">
-                <a href="../Subjects/AI/AI as a Service.html" target="Syllabus"
-                  ><img src="../Img/Angular.jpg" class="img8"
-                /></a>
-              </div>
-              <div class="right9">
-                <a
-                  href="../Subjects/AI/AI as a Service.html"
-                  target="Syllabus"
-                  class="name"
-                  >AI As A Service</a
-                >
-                <br /><br />
-                <i
-                  class="fa fa-level-up"
-                  style="font-size: 15px; color: black"
-                ></i
-                >&nbsp;&nbsp; Beginner &nbsp;&nbsp;&nbsp;
-                <i
-                  class="fa fa-hourglass-2"
-                  style="font-size: 15px; color: black"
-                ></i
-                >&nbsp;&nbsp; 2 hr<br /><br />
-                <i
-                  class="fa fa-star"
-                  style="font-size: 15px; color: #f5d20a"
-                ></i
-                >&nbsp;&nbsp; 4.9 &nbsp;&nbsp;&nbsp;
-                <i class="fa fa-circle" style="font-size: 15px; color: grey"></i
-                >&nbsp;&nbsp;&nbsp;&nbsp;90.3k Enrolled
-              </div>
-            </div>
-            <br /><br />
             <div class="box6">
               <div class="left9">
                 <a
@@ -499,6 +587,7 @@
         </div>
       </div>
     </div>
+    </section>
   </main>
 
   <!-- Footer -->
