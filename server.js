@@ -104,14 +104,15 @@ app.post("/contact", (req, res) => {
 // POST: Review Form
 app.post("/reviewForm", (req, res) => {
   const { name, email, review } = req.body;
-  const query = "INSERT INTO review (name, email, message) VALUES (?, ?, ?)";
 
+  const query = "INSERT INTO review (name, email, message) VALUES (?, ?, ?)";
   db.query(query, [name, email, review], (err) => {
     if (err) {
       console.error("Review submission error:", err);
       return res.status(500).send("Review submission failed");
+    } else {
+      res.status(200).json({ success: true, message: 'Message submitted successfully' });
     }
-    res.redirect("/review");
   });
 });
 

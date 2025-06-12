@@ -226,7 +226,7 @@
           .then((response) => response.json())
           .then((data) => {
             const reviewsContainer = document.getElementById("reviewsSection");
-            reviewsContainer.innerHTML = ""; // Clear existing
+            reviewsContainer.innerHTML = "";
 
             data.reviews.forEach((review) => {
               const reviewCard = document.createElement("div");
