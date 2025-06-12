@@ -374,13 +374,13 @@
       <h2 id="slider-heading">Top Courses</h2>
       <div class="slider-bar">
         <div class="course-box">
-          <img src="Img/HTML.jpg" alt="HTML Course" class="course-img" />
+          <img src="Img/HTML.png" alt="HTML Course" class="course-img" />
           <h3>HTML5</h3>
           <a href="#">Learn More</a>
         </div>
 
         <div class="course-box">
-          <img src="Img/CSS.jpg" alt="CSS Course" class="course-img" />
+          <img src="Img/CSS.png" alt="CSS Course" class="course-img" />
           <h3>CSS</h3>
           <a href="#">Learn More</a>
         </div>
@@ -484,64 +484,6 @@
     &copy; 2025 Your Company. All rights reserved.
   </footer>
 
-  <!-- JavaScript Logic -->
-  <script>
-    // Function to handle search
-    function handleSearch(event) {
-      event.preventDefault();
-      const input = document.getElementById('searchInput').value.trim();
-      if (input) {
-        alert('Searching for: ' + input);
-        // You can replace this alert with actual search logic or redirection
-        // window.location.href = `/courses.html?search=${encodeURIComponent(input)}`;
-      } else {
-        alert('Please enter a course name to search.');
-      }
-    }
-
-    // Function to redirect to login page
-    function redirectToLogin() {
-      window.location.href = 'login.html';
-    }
-
-    // Function to redirect to home page
-    function redirectToHome() {
-      window.location.href = 'index.html';
-    }
-
-    // Function to handle contact form submission
-    document.addEventListener('DOMContentLoaded', function () {
-        const form = document.getElementById('/contact');
-      
-        form.addEventListener('/submit', function (event) {
-          event.preventDefault();
-      
-          const fname = document.getElementById('fname').value;
-          const lname = document.getElementById('lname').value;
-          const cemail = document.getElementById('cemail').value;
-          const uphone = document.getElementById('uphone').value;
-          const message = document.getElementById('message').value;
-      
-          // Make a POST request to your server for form submission
-          fetch('/contact', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ fname, lname, phone, cemail, message }),
-          })
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.success) {
-              alert('Message Submitted Successfully!');
-              form.reset(); // Reset the form after successful submission
-            } else {
-              alert('Error: ' + data.message);
-            }
-          })
-          .catch((error) => console.error('Error:', error));
-        });
-      });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

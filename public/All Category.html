@@ -11,13 +11,24 @@
         text-align: center;
       }
 
+      .topics {
+        text-align: left;
+        margin-left: 20px;
+        font-size: 20px;
+        border-bottom: 2px solid #00bcd4;
+        padding-bottom: 8px;
+        width: fit-content;   
+        cursor: pointer;
+      }
+
       /* Courses Slider */
       .slider-bar {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: left;
         gap: 30px;
         margin-top: 30px;
+        margin-left: 20px;
       }
 
       .course-box {
@@ -29,6 +40,7 @@
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         transition: transform 0.3s ease;
         text-align: center;
+        height: 250px;
       }
 
       .course-box:hover {
@@ -46,6 +58,7 @@
       }
 
       .course-box h3 {
+        text-align: center;
         margin-bottom: 10px;
         font-size: 18px;
         color: #333;
@@ -114,118 +127,186 @@
       <!-- Slider Section -->
       <section id="slider" aria-labelledby="slider-heading">
         <h2 id="slider-heading">LEARN WITH EXPERT ANYTIME ANYWHERE</h2>
+
+        <br>
+        <h3 class="topics" id="live lectures">Live Lectures</h3>
         <div class="slider-bar">
           <div class="course-box">
-            <img src="Img/E5.jpg" alt="HTML Course" class="course-img" onclick="window.location.href = 'All Category/Live Master Class.html';"/>
-            <h3>Live Master Class</h3>
-            <p style="font-size: 12px; margin-top: -10px; margin-bottom: 10px;">224 courses</p>
-            <a href="All Category/Live Master Class.html">Learn More</a>
+            <a href="https://www.youtube.com/live/jiOdulLYpTE?si=GVs4cUW2iKIxmRE_" target="_blank">
+              <img src="Img/web.jpeg" alt="Web" class="course-img" />
+            </a>
+            <h3>Learn to Create Project - Rentor Application</h3>
+            <a href="https://www.youtube.com/live/jiOdulLYpTE?si=GVs4cUW2iKIxmRE_" target="_blank">Join Now</a>
           </div>
 
           <div class="course-box">
-            <img src="Img/E3.jpg" alt="HTML Course" class="course-img" />
-            <h3>IT & Software</h3>
-            <p style="font-size: 12px; margin-top: -10px; margin-bottom: 10px;">230 courses</p>
-            <a href="All Category/IT & Software.html">Learn More</a>
+            <a href="https://www.youtube.com/live/_vkI5KFt5P4?si=CITaoyAFwQMnirKz" target="_blank">
+              <img src="Img/live.jpg" alt="Live" class="course-img" />
+            </a>
+            <h3>Let's Begin with Basics - Web Development</h3>
+            <a href="https://www.youtube.com/live/_vkI5KFt5P4?si=CITaoyAFwQMnirKz">Join Now</a>
           </div>
 
           <div class="course-box">
-            <img src="Img/E6.jpg" alt="HTML Course" class="course-img" />
-            <h3>Data Science</h3>
-            <p style="font-size: 12px; margin-top: -10px; margin-bottom: 10px;">90 courses</p>
-            <a href="All Category/Data Science.html">Learn More</a>
+            <a href="https://www.youtube.com/live/TOEYfSa6JSs?si=Uv9ytHOCH52LpSJ-" target="_blank">
+              <img src="Img/Java.jpg" alt="Java" class="course-img" />
+            </a>
+            <h3>Let's Start with Basics of Java Programming</h3>
+            <a href="https://www.youtube.com/live/TOEYfSa6JSs?si=Uv9ytHOCH52LpSJ-">Join Now</a>
+          </div>
+        </div>
+
+        <br>
+        <h3 class="topics" id="live lectures">Web Development & Designing</h3>
+        <div class="slider-bar">
+          
+          <div class="course-box">
+            <a href="" target="_blank">
+              <img src="Img/Html.png" alt="HTML Course" class="course-img" href=""/>
+            </a>
+            <h3>Let's Start with HTML5</h3>
+            <a href="">Join Now</a>
           </div>
 
           <div class="course-box">
-            <img src="Img/E9.jpg" alt="HTML Course" class="course-img" />
-            <h3>Artificial Intelligence</h3>
-            <p style="font-size: 12px; margin-top: -10px; margin-bottom: 10px;">50 courses</p>
-            <a href="All Category/AI.html">Learn More</a>
+            <a href="" target="_blank">
+              <img src="Img/Css.png" alt="Css Course" class="course-img" href=""/>
+            </a>
+            <h3>Let's Start with CSS3</h3>
+            <a href="">Join Now</a>
           </div>
 
           <div class="course-box">
-            <img src="Img/E15.jpg" alt="HTML Course" class="course-img" />
-            <h3>Machine Learning</h3>
-            <p style="font-size: 12px; margin-top: -10px; margin-bottom: 10px;">80 courses</p>
-            <a href="All Category/Machine Learning.html">Learn More</a>
+            <a href="" target="_blank">
+              <img src="Img/JS.jpg" alt="Js Course" class="course-img" href=""/>
+            </a>
+            <h3>Let's Start with JavaScript</h3>
+            <a href="">Join Now</a>
           </div>
 
           <div class="course-box">
-            <img src="Img/E2.jpg" alt="HTML Course" class="course-img" />
-            <h3>Digital Marketing</h3>
-            <p style="font-size: 12px; margin-top: -10px; margin-bottom: 10px;">34 courses</p>
-            <a href="All Category/Digital Marketing.html">Learn More</a>
+            <a href="" target="_blank">
+              <img src="Img/Angular.png" alt="Angular JS Course" class="course-img" href=""/>
+            </a>
+            <h3>Let's Start with Angular JS</h3>
+            <a href="">Join Now</a>
           </div>
 
           <div class="course-box">
-            <img src="Img/E7.jpg" alt="HTML Course" class="course-img" />
-            <h3>Management<h3>
-            <p style="font-size: 12px; margin-top: -10px; margin-bottom: 10px;">121 courses</p>
-            <a href="All Category/Management.html">Learn More</a>
+            <a href="" target="_blank">
+              <img src="Img/GitHub.png" alt="GitHub Course" class="course-img" href=""/>
+            </a>
+            <h3>Let's Start with GitHub</h3>
+            <a href="">Join Now</a>
           </div>
 
           <div class="course-box">
-            <img src="Img/E11.jpg" alt="HTML Course" class="course-img" />
-            <h3>Cyber Security</h3>
-            <p style="font-size: 12px; margin-top: -10px; margin-bottom: 10px;">20 courses</p>
-            <a href="All Category/Cyber Security.html">Learn More</a>
+            <a href="" target="_blank">
+              <img src="Img/figma.jpg" alt="Figma Course" class="course-img" href=""/>
+            </a>
+            <h3>Let's Start with GitHub</h3>
+            <a href="">Join Now</a>
           </div>
 
           <div class="course-box">
-            <img src="Img/E8.jpg" alt="HTML Course" class="course-img" />
-            <h3>Study Abroad</h3>
-            <p style="font-size: 12px; margin-top: -10px; margin-bottom: 10px;">5 courses</p>
-            <a href="All Category/Abroad.html">Learn More</a>
+            <a href="" target="_blank">
+              <img src="Img/react-js.jpg" alt="React JS Course" class="course-img" href=""/>
+            </a>
+            <h3>Let's Start with React JS</h3>
+            <a href="">Join Now</a>
+          </div>
+        </div>
+        
+        <br>
+        <h3 class="topics" id="live lectures">Backend Development</h3>
+        <div class="slider-bar">
+          
+          <div class="course-box">
+            <a href="" target="_blank">
+              <img src="Img/php.jpg" alt="Php Course" class="course-img" href=""/>
+            </a>
+            <h3>Let's Start with PHP</h3>
+            <a href="">Join Now</a>
           </div>
 
           <div class="course-box">
-            <img src="Img/E12.jpg" alt="HTML Course" class="course-img" />
-            <h3>Cloud Computing</h3>
-            <p style="font-size: 12px; margin-top: -10px; margin-bottom: 10px;">45 courses</p>
-            <a href="All Category/Cloud.html">Learn More</a>
+            <a href="" target="_blank">
+              <img src="Img/Nodejs.jpg" alt="NodeJs Course" class="course-img" href=""/>
+            </a>
+            <h3>Let's Start with NodeJS</h3>
+            <a href="">Join Now</a>
           </div>
 
           <div class="course-box">
-            <img src="Img/E1.jpg" alt="HTML Course" class="course-img" />
-            <h3>Big Data</h3>
-            <p style="font-size: 12px; margin-top: -10px; margin-bottom: 10px;">14 courses</p>
-            <a href="All Category/Big Data.html">Learn More</a>
+            <a href="" target="_blank">
+              <img src="Img/Ruby.jpg" alt="Ruby Course" class="course-img" href=""/>
+            </a>
+            <h3>Let's Start with Ruby</h3>
+            <a href="">Join Now</a>
           </div>
 
           <div class="course-box">
-            <img src="Img/E16.png" alt="HTML Course" class="course-img" />
-            <h3>UI/UX Designing</h3>
-            <p style="font-size: 12px; margin-top: -10px; margin-bottom: 10px;">5 courses</p>
-            <a href="All Category/UX.html">Learn More</a>
+            <a href="" target="_blank">
+              <img src="Img/jwt.png" alt="JWt Course" class="course-img" href=""/>
+            </a>
+            <h3>Let's Start with RESTful</h3>
+            <a href="">Join Now</a>
           </div>
 
           <div class="course-box">
-            <img src="Img/E4.jpg" alt="HTML Course" class="course-img" />
-            <h3>Sales & Business Development</h3>
-            <p style="font-size: 12px; margin-top: -10px; margin-bottom: 10px;">4 courses</p>
-            <a href="All Category/Sales.html">Learn More</a>
+            <a href="" target="_blank">
+              <img src="Img/C.png" alt="C Course" class="course-img" href=""/>
+            </a>
+            <h3>Let's Start with C Programming</h3>
+            <a href="">Join Now</a>
           </div>
 
           <div class="course-box">
-            <img src="Img/E10.jpg" alt="HTML Course" class="course-img" />
-            <h3>Interview Preparation</h3>
-            <p style="font-size: 12px; margin-top: -10px; margin-bottom: 10px;">51 courses</p>
-            <a href="All Category/Interview.html">Learn More</a>
+            <a href="" target="_blank">
+              <img src="Img/C++.jpg" alt="JWt Course" class="course-img" href=""/>
+            </a>
+            <h3>Let's Start with C++</h3>
+            <a href="">Join Now</a>
           </div>
 
           <div class="course-box">
-            <img src="Img/E14.jpg" alt="HTML Course" class="course-img" />
-            <h3>Master Class</h3>
-            <p style="font-size: 12px; margin-top: -10px; margin-bottom: 10px;">10 courses</p>
-            <a href="All Category/Master classes.html">Learn More</a>
+            <a href="" target="_blank">
+              <img src="Img/C1.png" alt="JWt Course" class="course-img" href=""/>
+            </a>
+            <h3>Let's Start with C# Programming</h3>
+            <a href="">Join Now</a>
           </div>
 
           <div class="course-box">
-            <img src="Img/E13.jpg" alt="HTML Course" class="course-img" />
-            <h3>Languages</h3>
-            <p style="font-size: 12px; margin-top: -10px; margin-bottom: 10px;">50 courses</p>
-            <a href="All Category/Languages.html">Learn More</a>
+            <a href="" target="_blank">
+              <img src="Img/Python.jpg" alt="Python Course" class="course-img" href=""/>
+            </a>
+            <h3>Let's Start with Python</h3>
+            <a href="">Join Now</a>
           </div>
+
+        </div>
+
+        <br>
+        <h3 class="topics" id="live lectures">Android Development</h3>
+        <div class="slider-bar">
+
+          <div class="course-box">
+            <a href="" target="_blank">
+              <img src="Img/Android.jpg" alt="Android Course" class="course-img" href=""/>
+            </a>
+            <h3>Let's Start with Android Development</h3>
+            <a href="">Join Now</a>
+          </div>
+
+          <div class="course-box">
+            <a href="" target="_blank">
+              <img src="Img/Firebase.jpg" alt="Firebase Course" class="course-img" href=""/>
+            </a>
+            <h3>Let's Start with Firebase</h3>
+            <a href="">Join Now</a>
+          </div>
+
         </div>
       </section>
     </main>
@@ -235,17 +316,6 @@
       &copy; 2025 Your Company. All rights reserved.
     </footer>
 
-    <!-- JavaScript for handling user name display -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const params = new URLSearchParams(window.location.search);
-        const userName = params.get("userName");
-
-        if (userName) {
-          const userNameElement = document.getElementById("userName");
-          userNameElement.innerText = `${userName}`;
-        }
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
