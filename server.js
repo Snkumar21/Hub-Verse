@@ -103,10 +103,10 @@ app.post("/contact", (req, res) => {
 
 // POST: Review Form
 app.post("/reviewForm", (req, res) => {
-  const { reviewname, reviewemail, reviewText } = req.body;
-  const query = "INSERT INTO review (rname, remail, rmessage) VALUES (?, ?, ?)";
+  const { name, email, review } = req.body;
+  const query = "INSERT INTO review (name, email, message) VALUES (?, ?, ?)";
 
-  db.query(query, [reviewname, reviewemail, reviewText], (err) => {
+  db.query(query, [name, email, review], (err) => {
     if (err) {
       console.error("Review submission error:", err);
       return res.status(500).send("Review submission failed");

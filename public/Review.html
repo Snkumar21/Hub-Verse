@@ -170,9 +170,9 @@
           <h2>📝 Give Us a Review</h2>
           <p>Let us make changes according to you and for you</p>
           <form id="reviewForm" action="/reviewForm" method="post">
-            <input type="text" name="reviewname" id="reviewname" placeholder="Your Name" required />
-            <input type="email" name="reviewemail" id="reviewemail" placeholder="Your Email" required />
-            <textarea name="reviewText" id="reviewText" placeholder="Type your message here..." required ></textarea>
+            <input type="text" name="reviewname" id="name" placeholder="Your Name" required />
+            <input type="email" name="reviewemail" id="email" placeholder="Your Email" required />
+            <textarea name="reviewText" id="review" placeholder="Type your message here..." required ></textarea>
             <button type="submit" class="btn">Send</button>
           </form>
         </div>
@@ -198,16 +198,16 @@
         reviewForm.addEventListener("submit", function (event) {
           event.preventDefault();
 
-          const reviewname = document.getElementById("reviewname").value;
-          const reviewemail = document.getElementById("reviewemail").value;
-          const reviewText = document.getElementById("reviewText").value;
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const review = document.getElementById("review").value;
 
           fetch("/reviewForm", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify({ reviewname, reviewemail, reviewText }),
+            body: JSON.stringify({ name, email, review }),
           })
             .then((response) => response.json())
             .then((data) => {
