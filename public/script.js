@@ -11,11 +11,6 @@ function handleSearch(event) {
     }
 }
 
-// Function to redirect to login page
-function redirectToLogin() {
-    window.location.href = 'login.html';
-}
-
 // Function to redirect to home page
 function redirectToHome() {
     window.location.href = 'index.html';
@@ -54,13 +49,30 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// JavaScript for handling user name display
+// Script for login & logout with username display
 document.addEventListener("DOMContentLoaded", function () {
-    const params = new URLSearchParams(window.location.search);
-    const userName = params.get("userName");
+    const userName = localStorage.getItem("userName");
+    const welcomeSection = document.getElementById("welcome-section");
+    const joinBtn = document.getElementById("join-btn");
 
     if (userName) {
-        const userNameElement = document.getElementById("userName");
-        userNameElement.innerText = `${userName}`;
+        if (welcomeSection) {
+        welcomeSection.innerHTML = `<h2>Welcome, ${userName}!</h2>`;
+        }
+
+        if (joinBtn) {
+            joinBtn.textContent = "Logout";
+            joinBtn.onclick = function () {
+                localStorage.removeItem("userName");
+                window.location.href = "login.html";
+            };
+        }
+    } else {
+        if (joinBtn) {
+            joinBtn.textContent = "Join Now";
+            joinBtn.onclick = function () {
+                window.location.href = "login.html";
+            };
+        }
     }
 });

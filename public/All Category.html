@@ -87,16 +87,17 @@
             <a href="index.html" class="nav">Home</a>
             <a href="about.html" class="nav">About</a>
             <a href="courses.html" class="nav">Courses</a>
-            <a href="#contact" class="nav">Contact</a>
+            <a href="index.html#contact" class="nav">Contact</a>
             <a href="review.html" class="nav">Reviews</a>
         </nav>
-        <button class="join-btn" id="join-btn" onclick="redirectToLogin()" aria-label="Join Now">Join Now</button>
+        <button class="join-btn" id="join-btn" aria-label="Join Now">Join Now</button>
     </header>
 
     <!-- Main Content -->
     <main>
       <!-- Search Bar -->
       <section class="hero" id="home">
+        <div id="welcome-section" class="welcome-section"></div>
         <div class="hero-content">
           <form action="#" method="get" class="search-bar" onsubmit="handleSearch(event)">
             <input type="text" name="search" list="input" placeholder="Search Courses" class="search" id="searchInput">

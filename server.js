@@ -55,14 +55,14 @@ app.post("/LoginForm", (req, res) => {
   db.query(query, [email], (err, results) => {
     if (err) {
       console.error("Login query error:", err);
-      return res.status(500).send("Login failed");
+      return res.status(500).json({ success: false, message: "Login failed" });
     }
 
     if (results.length > 0 && results[0].password === password) {
       const userName = results[0].name;
-      res.redirect(`/category?userName=${encodeURIComponent(userName)}`);
+      res.status(200).json({ success: true, userName });
     } else {
-      res.status(401).send("Invalid login credentials");
+      res.status(401).json({ success: false, message: "Invalid credentials" });
     }
   });
 });
