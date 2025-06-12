@@ -27,6 +27,7 @@ app.use(express.json());
 
 // Page Routes
 app.get("/index", (_, res) => res.sendFile(path.join(__dirname, "public", "index.html")));
+app.get("/category", (_, res) => res.sendFile(path.join(__dirname, "public", "All Category.html")));
 app.get("/forgot", (_, res) => res.sendFile(path.join(__dirname, "public", "Forgot.html")));
 app.get("/login", (_, res) => res.sendFile(path.join(__dirname, "public", "login.html")));
 app.get("/signUp", (_, res) => res.sendFile(path.join(__dirname, "public", "signUp.html")));
@@ -49,17 +50,17 @@ app.post("/signupForm", (req, res) => {
 // POST: Login Form
 app.post("/LoginForm", (req, res) => {
   const { email, password } = req.body;
-  const query = "SELECT * FROM users WHERE email = ?";
 
+  const query = "SELECT * FROM users WHERE email = ?";
   db.query(query, [email], (err, results) => {
     if (err) {
       console.error("Login query error:", err);
       return res.status(500).send("Login failed");
     }
 
-    if (results.length > 0 && results[0].upassword === password) {
+    if (results.length > 0 && results[0].password === password) {
       const userName = results[0].name;
-      res.redirect(`/category?userName=${userName}`);
+      res.redirect(`/category?userName=${encodeURIComponent(userName)}`);
     } else {
       res.status(401).send("Invalid login credentials");
     }

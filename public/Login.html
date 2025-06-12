@@ -226,7 +226,7 @@
 
     <p style="text-align: center;">or login with email</p>
 
-    <form action="/LoginForm" method="POST">
+    <form id="LoginForm">
       <input type="email" name="email" placeholder="Email Address" required>
       <input type="password" name="password" placeholder="Password" required>
       <div class="checkbox-remember">
@@ -243,6 +243,40 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- Script of Login Form -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector("form");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const email = form.querySelector('input[name="email"]').value;
+        const password = form.querySelector('input[name="password"]').value;
+
+        fetch("/LoginForm", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        })
+          .then((response) => {
+            if (response.redirected) {
+              // Automatically follow the redirect (to /category?userName=...)
+              window.location.href = response.url;
+            } else if (response.status === 401) {
+              alert("Invalid login credentials.");
+            } else {
+              return response.text().then((msg) => alert("Error: " + msg));
+            }
+          })
+          .catch((error) => {
+            console.error("Error during login:", error);
+            alert("Something went wrong. Try again later.");
+          });
+      });
+    });
+  </script>
 </body>
 </html>
