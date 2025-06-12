@@ -448,14 +448,13 @@
         <!-- Left: Form -->
         <div class="contact-form">
           <h3>Send a Message</h3>
-          <form action="/contact" method="post">
+          <form action="/contact" id="contactForm" method="post">
             <div class="form-row">
-              <input type="text" name="fname" id="fname" placeholder="First Name" required>
-              <input type="text" name="lname" id="lname" placeholder="Last Name" required>
+              <input type="text" name="name" id="name" placeholder="Name" required>
             </div>
             <div class="form-row">
-              <input type="email" name="email" id="cemail" placeholder="Email" required>
-              <input type="tel" name="phone" id="uphone" placeholder="Phone" required>
+              <input type="email" name="email" id="email" placeholder="Email" required>
+              <input type="tel" name="phone" id="phone" placeholder="Phone" required>
             </div>
             <textarea name="message" id="message" rows="5" placeholder="How can we help?" required></textarea>
             <button type="submit" id="submit">Submit</button>

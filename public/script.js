@@ -23,33 +23,32 @@ function redirectToHome() {
 
 // Function to handle contact form submission
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('/contact');
+    const form = document.getElementById('contactForm');
 
-    form.addEventListener('/submit', function (event) {
+    form.addEventListener('submit', function (event) {
         event.preventDefault();
-    
-        const fname = document.getElementById('fname').value;
-        const lname = document.getElementById('lname').value;
-        const cemail = document.getElementById('cemail').value;
-        const uphone = document.getElementById('uphone').value;
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
         const message = document.getElementById('message').value;
-    
+
         // Make a POST request to your server for form submission
         fetch('/contact', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ fname, lname, uphone, cemail, message }),
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, phone, message }),
         })
         .then((response) => response.json())
         .then((data) => {
-        if (data.success) {
-            alert('Message Submitted Successfully!');
-            form.reset();
-        } else {
-            alert('Error: ' + data.message);
-        }
+            if (data.success) {
+                alert('Message Submitted Successfully!');
+                form.reset();
+            } else {
+                alert('Error: ' + data.message);
+            }
         })
         .catch((error) => console.error('Error:', error));
     });

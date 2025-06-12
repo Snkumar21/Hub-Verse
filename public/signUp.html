@@ -212,7 +212,7 @@
     <p style="text-align: center;">or sign up with email</p>
 
     <form id="signupForm" action="/signupForm" method="POST">
-      <input type="text" name="ename" id="ename" placeholder="Your Name" required>
+      <input type="text" name="name" id="name" placeholder="Your Name" required>
       <input type="email" name="email" id="email" placeholder="Your Email" required>
       <input type="password" name="password" id="password" placeholder="Your Password" required>
       <br>
@@ -230,21 +230,23 @@
       const form = document.getElementById("signupForm");
       form.addEventListener("submit", function (event) {
         event.preventDefault();
-        const ename = document.getElementById("ename").value;
+        const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
 
-        fetch("/submit", {
+        fetch("/signupForm", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ ename, email, password }),
+          body: JSON.stringify({ name, email, password }),
         })
         .then((response) => response.json())
         .then((data) => {
           if (data.success) {
             alert("Sign Up Successfully");
+            form.reset();
+            window.location.href = "/login";
           } else {
             alert("Error: " + data.message);
           }
