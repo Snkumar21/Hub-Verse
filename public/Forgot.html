@@ -1,88 +1,199 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title></title>
-    <script src="Js/angular.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/forgot.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-  <body>
-    <div class="main">
-      <div class="left">
-        <img src="Img/Logo1.png" class="logo" /><mindverse
-          ><b>Hub-Verse</b></mindverse
-        ><br /><br />
-        <p4>Welcome Back</p4><br /><br />
-        <p10>----------------------------------------------------------</p10>
-        <br /><br />
-        <form action="/forgot" method="post" id="/forgot">
-          <label><b>Email Address</b></label
-          ><br />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            class="p1"
-            placeholder="Email Address"
-            required
-          /><br /><br />
-          <label><b>Create Password</b></label
-          ><br />
-          <input
-            type="password"
-            id="password"
-            name="password"
-            class="p1"
-            placeholder="Password"
-            required
-          /><br /><br />
-          <label><b>Confirm Password</b></label
-          ><br />
-          <input
-            type="password"
-            id="confirmpassword"
-            name="confirmpassword"
-            class="p1"
-            placeholder="Password"
-            required
-          /><br /><br />
-          <input type="checkbox" class="keep" /><p3>Keep me logged in</p3
-          ><br /><br />
-          <a href="" class="log"
-            ><button type="submit" class="p4" value="/submit">Log in</button></a
-          >
-        </form>
-        <br />
-        <p5
-          >Don't have an account?
-          <a href="signUp.html" class="p5">Sign up</a></p5
-        >
-      </div>
-      <div class="right"></div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forgot Password | Hub-Verse</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #252c54, #4b6cb7);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px;
+      background: hsla(222, 95%, 15%, 0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 28px;
+      font-weight: 700;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .logo img {
+      height: 30px;
+      width: 40px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    .join-btn {
+      background-color: #00bcd4;
+      border: none;
+      padding: 8px 18px;
+      font-size: 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      color: #252c54;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .join-btn:hover {
+      background-color: #028a9b;
+      color: white;
+    }
+
+    .forgot-container {
+      max-width: 500px;
+      margin: 5% auto;
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid #444;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .forgot-container h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    .forgot-container input[type="email"],
+    .forgot-container input[type="password"] {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0 20px 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      border: 2px solid gray;
+      border-radius: 8px;
+      color: white;
+      font-size: 18px;
+    }
+
+    .forgot-container button {
+      width: 100%;
+      padding: 14px;
+      background-color: #00bcd4;
+      color: #111;
+      border: none;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .forgot-container button:hover {
+      background-color: #028a9b;
+      color: white;
+    }
+
+    .extra {
+      margin-top: 20px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .extra a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    .extra a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .forgot-container {
+        margin: 20% auto;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo" onclick="window.location.href='index.html'">
+      <img src="Img/Logo1.png" alt="Hub-Verse Logo" />
+      HubVerse
     </div>
-    <script src="../database.js"></script>
-  </body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="courses.html">Courses</a>
+      <a href="#contact">Contact</a>
+      <a href="review.html">Reviews</a>
+    </nav>
+    <button class="join-btn" onclick="window.location.href='login.html'">Log In</button>
+  </header>
+
+  <div class="forgot-container">
+    <h2>Reset Your Password</h2>
+    <form id="forgotForm" method="POST" action="/forgot">
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+      <input type="password" id="password" name="password" placeholder="New password" required />
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm new password" required />
+      <br>
+      <button type="submit">Reset Password</button>
+    </form>
+    <div class="extra">
+      <p>Remembered your password? <a href="login.html">Log In</a></p><br>
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </div>
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("/forgot");
-
-      form.addEventListener("/submit", function (event) {
+      const form = document.getElementById("forgotForm");
+      form.addEventListener("submit", function (event) {
         event.preventDefault();
 
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
-        const confirmPassword =
-          document.getElementById("confirmPassword").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
 
         if (password !== confirmPassword) {
           alert("Passwords do not match. Please try again.");
           return;
         }
 
-        // Make a POST request to your server for form submission
         fetch("/forgot", {
           method: "POST",
           headers: {
@@ -90,17 +201,18 @@
           },
           body: JSON.stringify({ email, password }),
         })
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.success) {
-              alert("Password Changed Successful!");
-              form.reset(); // Reset the form after successful submission
-            } else {
-              alert("Error: " + data.message);
-            }
-          })
-          .catch((error) => console.error("Error:", error));
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.success) {
+            alert("Password Changed Successfully!");
+            form.reset();
+          } else {
+            alert("Error: " + data.message);
+          }
+        })
+        .catch((error) => console.error("Error:", error));
       });
     });
   </script>
+</body>
 </html>

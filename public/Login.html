@@ -1,97 +1,248 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title> </title>
-    <script src="Js/angular.min.js"></script>
-    <script src="database.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/login.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-  <body>
-    <div class="main">
-      <div class="left">
-        <img src="Img/Logo1.png" class="logo" /><mindverse
-          ><b>Hub-Verse</b></mindverse
-        ><br /><br />
-        <p4>Welcome Back</p4><br /><br />
-        <div class="login1">
-          <a href=""
-            ><button class="google">
-              <i class="fa fa-google"></i><p1><b>Log in with Google</b></p1>
-            </button></a
-          >
-        </div>
-        <br />
-        <p2>-------------OR LOGIN WITH EMAIL--------------</p2>
-        <br /><br />
-        <form action="/LoginForm" method="POST" id="/LoginForm">
-          <label><b>Email Address</b></label
-          ><br />
-          <input
-            type="email"
-            name="email"
-            id="email"
-            class="p1"
-            placeholder="Email Address"
-            required
-          /><br /><br />
-          <label><b>Password</b></label
-          ><br />
-          <input
-            type="password"
-            name="password"
-            id="password"
-            class="p1"
-            placeholder="Password"
-            required
-          /><br /><br />
-          <a href="All Cateogry.html" class="log"
-            ><button type="submit" value="/submit" class="p4">Log in</button></a
-          >
-        </form>
-        <br />
-        <input type="checkbox" class="keep" /><p3>Keep me logged in</p3>
-        <a href="Forgot.html" class="forgot">Forgot your password?</a>
-        <br /><br />
-        <p5
-          >Don't have an account?<a href="signUp.html" class="p5"
-            >Sign up</a
-          ></p5
-        >
-      </div>
-      <div class="right"></div>
-    </div>
-    <script src="Connection/database.js"></script>
-  </body>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("/LoginForm"); // Add an ID to your form element
-      form.addEventListener("/submit", function (event) {
-        event.preventDefault();
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Hub-Verse</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
 
-        // Make a POST request to your server
-        fetch("/submit", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email, password }),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.success) {
-              alert("Login Successfully");
-            } else {
-              alert("Error: " + data.message);
-            }
-          })
-          .catch((error) => console.error("Error:", error));
-      });
-    });
-  </script>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(to right, #252c54, #4b6cb7);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Header */
+    header {
+      width: 100%;
+      padding: 20px;
+      background: hsla(222, 95%, 15%, 0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    header .logo {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    .join-btn {
+      background-color: #00bcd4;
+      border: none;
+      padding: 8px 18px;
+      font-size: 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      color: #252c54;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .join-btn:hover {
+      background-color: #028a9b;
+      color: white;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+
+    .logo-image {
+      height: 40px;
+      width: 40px;
+      object-fit: contain;
+    }
+
+    /* Main Content */
+    .login-container {
+      max-width: 500px;
+      margin: 4% auto;
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid #444;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .login-logo {
+      display: block;
+      margin: 0 auto 10px auto;
+      width: 180px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    .login-container input[type="email"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0 20px 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      border: 2px solid gray;
+      border-radius: 8px;
+      color: white;
+      font-size: 18px;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 14px;
+      background-color: red;
+      color: white;
+      border: none;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .login-container button:hover {
+      background-color: #cc0000;
+    }
+
+    .social-login {
+      margin: 15px 0;
+      text-align: center;
+    }
+
+    .social-login button {
+      background-color: white;
+      color: #111;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      font-size: 17px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .social-login button i {
+      margin-right: 10px;
+      font-size: 20px;
+    }
+
+    .login-container .extra {
+      margin-top: 20px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .login-container .extra a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    .login-container .extra a:hover {
+      text-decoration: underline;
+    }
+
+    .checkbox-remember {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .login-container {
+        margin: 20% auto;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+      <div class="logo" tabindex="0" onclick="redirectToHome()">
+          <img src="Img/Logo1.png" alt="HubVerse Logo" class="logo-image" />
+          HubVerse
+      </div>
+      <nav aria-label="Primary Navigation">
+          <a href="index.html" class="nav">Home</a>
+          <a href="about.html" class="nav">About</a>
+          <a href="courses.html" class="nav">Courses</a>
+          <a href="#contact" class="nav">Contact</a>
+          <a href="review.html" class="nav">Reviews</a>
+      </nav>
+      <button class="join-btn" id="join-btn" onclick="redirectToLogin()" aria-label="Join Now">Join Now</button>
+  </header>
+
+  <!-- Main -->
+  <div class="login-container">
+    <img src="Img/Logo1.png" alt="Hub-Verse Logo" class="login-logo">
+    <h2>Welcome Back to Hub-Verse</h2>
+
+    <div class="social-login">
+      <button><i class="fa fa-google"></i> Login with Google</button>
+    </div>
+
+    <p style="text-align: center;">or login with email</p>
+
+    <form action="/LoginForm" method="POST">
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <div class="checkbox-remember">
+        <input type="checkbox" id="keepLoggedIn">
+        <label for="keepLoggedIn">Keep me logged in</label>
+      </div>
+      <br>
+      <button type="submit">Log In</button>
+    </form>
+
+    <div class="extra">
+      <a href="Forgot.html">Forgot your password?</a><br><br>
+      Don't have an account? <a href="signUp.html">Sign up</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>

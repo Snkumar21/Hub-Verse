@@ -1,89 +1,239 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title></title>
-    <script src="Js/angular.min.js"></script>
-    <link rel="" type="" href="../Connection/signup.js" />
-    <link rel="stylesheet" type="text/css" href="css/Sign up.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-  <body>
-    <div class="main">
-      <div class="left"></div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up | Hub-Verse</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
 
-      <div class="right">
-        <img src="Img/Logo1.png" class="logo" /><mindverse
-          ><b>Hub-Verse</b></mindverse
-        >
-        <br /><br />
-        <p1><b>Welcome Here</b></p1>
-        <br /><br />
-        <div class="login1">
-          <a href=""
-            ><button class="google">
-              <i class="fa fa-google"></i><p2><b>Log in with Google</b></p2>
-            </button></a
-          >
-        </div>
-        <br />
-        <p3>-------------OR LOGIN WITH EMAIL--------------</p3>
-        <br /><br />
-        <form id="/signupForm" action="/signupForm" method="POST">
-          <label><b>Name</b></label
-          ><br />
-          <input
-            type="text"
-            name="ename"
-            id="ename"
-            class="p1"
-            placeholder="Your Name"
-            required
-          />
-          <br /><br />
-          <label><b>Email</b></label
-          ><br />
-          <input
-            type="email"
-            name="email"
-            id="email"
-            class="p1"
-            placeholder="Your Email"
-            required
-          />
-          <br /><br />
-          <label><b>Password</b></label
-          ><br />
-          <input
-            type="password"
-            name="password"
-            id="password"
-            class="p1"
-            placeholder="Your Password"
-            required
-          />
-          <br /><br />
-          <a href="Index.html" class="home">Home</a>
-          <a href="All Cateogry.html"
-            ><button class="sub" value="submit" type="submit">Submit</button></a
-          >
-        </form>
-      </div>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(to right, #252c54, #4b6cb7);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px;
+      background: hsla(222, 95%, 15%, 0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+
+    .logo-image {
+      height: 40px;
+      width: 40px;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    .join-btn {
+      background-color: #00bcd4;
+      border: none;
+      padding: 8px 18px;
+      font-size: 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      color: #252c54;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .join-btn:hover {
+      background-color: #028a9b;
+      color: white;
+    }
+
+    .signup-container {
+      max-width: 500px;
+      margin: 4% auto;
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid #444;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .signup-logo {
+      display: block;
+      margin: 0 auto 10px auto;
+      width: 180px;
+    }
+
+    .signup-container h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    .signup-container input[type="text"],
+    .signup-container input[type="email"],
+    .signup-container input[type="password"] {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0 20px 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      border: 2px solid gray;
+      border-radius: 8px;
+      color: white;
+      font-size: 18px;
+    }
+
+    .signup-container button {
+      width: 100%;
+      padding: 14px;
+      background-color: #00bcd4;
+      color: #111;
+      border: none;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .signup-container button:hover {
+      background-color: #028a9b;
+      color: white;
+    }
+
+    .social-login {
+      margin: 15px 0;
+      text-align: center;
+    }
+
+    .social-login button {
+      background-color: white;
+      color: #111;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      font-size: 17px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .social-login button i {
+      margin-right: 10px;
+      font-size: 20px;
+    }
+
+    .extra {
+      margin-top: 20px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .extra a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    .extra a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .signup-container {
+        margin: 20% auto;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo" onclick="window.location.href='index.html'">
+      <img src="Img/Logo1.png" alt="HubVerse Logo" class="logo-image" />
+      HubVerse
     </div>
-    <script src="Connection/database.js"></script>
-  </body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="courses.html">Courses</a>
+      <a href="#contact">Contact</a>
+      <a href="review.html">Reviews</a>
+    </nav>
+    <button class="join-btn" onclick="window.location.href='login.html'">Log In</button>
+  </header>
+
+  <div class="signup-container">
+    <img src="Img/Logo1.png" alt="Hub-Verse Logo" class="signup-logo">
+    <h2>Create Your Hub-Verse Account</h2>
+
+    <div class="social-login">
+      <button><i class="fa fa-google"></i> Sign up with Google</button>
+    </div>
+
+    <p style="text-align: center;">or sign up with email</p>
+
+    <form id="signupForm" action="/signupForm" method="POST">
+      <input type="text" name="ename" id="ename" placeholder="Your Name" required>
+      <input type="email" name="email" id="email" placeholder="Your Email" required>
+      <input type="password" name="password" id="password" placeholder="Your Password" required>
+      <br>
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <div class="extra">
+      Already have an account? <a href="login.html">Log in</a><br><br>
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </div>
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("signupForm"); // Add an ID to your form element
+      const form = document.getElementById("signupForm");
       form.addEventListener("submit", function (event) {
         event.preventDefault();
         const ename = document.getElementById("ename").value;
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
 
-        // Make a POST request to your server
         fetch("/submit", {
           method: "POST",
           headers: {
@@ -91,16 +241,17 @@
           },
           body: JSON.stringify({ ename, email, password }),
         })
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.success) {
-              alert("Sign Up Successfully");
-            } else {
-              alert("Error: " + data.message);
-            }
-          })
-          .catch((error) => console.error("Error:", error));
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.success) {
+            alert("Sign Up Successfully");
+          } else {
+            alert("Error: " + data.message);
+          }
+        })
+        .catch((error) => console.error("Error:", error));
       });
     });
   </script>
+</body>
 </html>
