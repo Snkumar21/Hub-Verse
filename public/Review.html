@@ -136,31 +136,11 @@
         <h2 class="section-title">📢 Top Reviews</h2>
         <a href="#write" class="btn">Write A Review</a>
 
-        <div class="all-reviews">
+        <div class="all-reviews" id="reviewsSection">
           <div class="review-card">
             <i class="fa fa-user-circle" aria-hidden="true"></i>
             <h3 class="reviewer-name">John Doe</h3>
             <p class="review-text">HubVerse is an amazing platform for learning!</p>
-          </div>
-          <div class="review-card">
-            <i class="fa fa-user-circle" aria-hidden="true"></i>
-            <h3 class="reviewer-name">Jane Smith</h3>
-            <p class="review-text">The UI is clean, and the resources are very helpful.</p>
-          </div>
-          <div class="review-card">
-            <i class="fa fa-user-circle" aria-hidden="true"></i>
-            <h3 class="reviewer-name">Jane Smith</h3>
-            <p class="review-text">The UI is clean, and the resources are very helpful.</p>
-          </div>
-          <div class="review-card">
-            <i class="fa fa-user-circle" aria-hidden="true"></i>
-            <h3 class="reviewer-name">Jane Smith</h3>
-            <p class="review-text">The UI is clean, and the resources are very helpful.</p>
-          </div>
-          <div class="review-card">
-            <i class="fa fa-user-circle" aria-hidden="true"></i>
-            <h3 class="reviewer-name">Jane Smith</h3>
-            <p class="review-text">The UI is clean, and the resources are very helpful.</p>
           </div>
         </div>
       </section>
@@ -235,8 +215,8 @@
 
               reviewCard.innerHTML = `
                 <i class="fa fa-user-circle" aria-hidden="true"></i>
-                <h3 class="reviewer-name">${review.rname}</h3>
-                <p class="review-text">${review.rmessage}</p>
+                <h3 class="reviewer-name">${review.name}</h3>
+                <p class="review-text">${review.message}</p>
               `;
 
               reviewsContainer.appendChild(reviewCard);
