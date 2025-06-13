@@ -1,15 +1,42 @@
 // Function to handle search
 function handleSearch(event) {
-    event.preventDefault();
-    const input = document.getElementById('searchInput').value.trim();
-    if (input) {
-        alert('Searching for: ' + input);
-        // You can replace this alert with actual search logic or redirection
-        // window.location.href = `/courses.html?search=${encodeURIComponent(input)}`;
-    } else {
-        alert('Please enter a course name to search.');
+    event.preventDefault(); // prevent form submission
+
+    const query = document.getElementById("searchInput").value.trim();
+    if (query) {
+        window.location.href = `All Category.html?search=${encodeURIComponent(query)}`;
     }
 }
+
+// Function to handle search button click -- All Category Page
+document.addEventListener("DOMContentLoaded", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchQuery = urlParams.get("search")?.toLowerCase();
+
+    if (searchQuery) {
+        const courseCards = document.querySelectorAll(".course-box");
+        let found = false;
+
+        courseCards.forEach(card => {
+            const title = card.querySelector(".course-title")?.textContent.toLowerCase();
+            if (title.includes(searchQuery)) {
+                card.style.display = "block";
+                found = true;
+            } else {
+                card.style.display = "none";
+            }
+        });
+
+        if (!found) {
+            const container = document.querySelector(".course-container");
+            const noResult = document.createElement("p");
+            noResult.textContent = `No courses found for "${searchQuery}"`;
+            noResult.style.color = "white";
+            noResult.style.fontSize = "20px";
+            container.appendChild(noResult);
+        }
+    }
+});
 
 // Function to redirect to home page
 function redirectToHome() {
