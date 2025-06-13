@@ -27,11 +27,6 @@ app.use(express.json());
 
 // Page Routes
 app.get("/index", (_, res) => res.sendFile(path.join(__dirname, "public", "index.html")));
-app.get("/category", (_, res) => res.sendFile(path.join(__dirname, "public", "All Category.html")));
-app.get("/forgot", (_, res) => res.sendFile(path.join(__dirname, "public", "Forgot.html")));
-app.get("/login", (_, res) => res.sendFile(path.join(__dirname, "public", "login.html")));
-app.get("/signUp", (_, res) => res.sendFile(path.join(__dirname, "public", "signUp.html")));
-app.get("/review", (_, res) => res.sendFile(path.join(__dirname, "public", "review.html")));
 
 // POST: Sign Up Form
 app.post("/signupForm", (req, res) => {
@@ -70,7 +65,7 @@ app.post("/LoginForm", (req, res) => {
 // POST: Forgot Password
 app.post("/forgot", (req, res) => {
   const { email, password } = req.body;
-  const query = "UPDATE users SET upassword = ? WHERE uemail = ?";
+  const query = "UPDATE users SET password = ? WHERE email = ?";
 
   db.query(query, [password, email], (err, results) => {
     if (err) {
@@ -79,7 +74,7 @@ app.post("/forgot", (req, res) => {
     }
 
     if (results.affectedRows > 0) {
-      res.redirect("/login");
+      res.status(200).json({ success: true, message: "Password Changed Successfully." });
     } else {
       res.status(404).json({ success: false, message: "User not found" });
     }

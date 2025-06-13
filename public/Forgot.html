@@ -162,7 +162,7 @@
       <a href="#contact">Contact</a>
       <a href="review.html">Reviews</a>
     </nav>
-    <button class="join-btn" id="join-btn" aria-label="Join Now">Join Now</button>
+    <button class="join-btn" onclick="window.location.href='login.html'">Log In</button>
   </header>
 
   <div class="forgot-container">
@@ -208,6 +208,7 @@
           if (data.success) {
             alert("Password Changed Successfully!");
             form.reset();
+            window.location.href = "login.html";
           } else {
             alert("Error: " + data.message);
           }
